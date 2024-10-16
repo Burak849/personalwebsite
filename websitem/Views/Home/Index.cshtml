@@ -11,12 +11,36 @@
         margin: 0;
         padding: 0;
         height: 100%;
-        background-image: url(/Media/starry.svg);
+        background-image: url(/Media/starry.svg); /* İlk arka plan */
         background-size: cover;
         background-position: center;
         font-family: Arial, sans-serif;
         opacity: 1;
         visibility: visible;
+        transition: background-image 0.5s; /* Arka plan geçiş efekti */
+    }
+
+    .background1 {
+        position: relative; 
+        padding:40px;
+        margin: 0;
+        width: 100%;
+    }
+
+    .background2 {
+        position: relative; /* Pozisyonu relative yap */
+        margin-left: -20px;
+        margin-top: 50vh; /* İlk arka planın altında yer alacak şekilde ayarla */
+        width: 103%;
+        height: 120vh; /* Tüm görünüm yüksekliğini kaplar */
+        background-color: #000017;
+        opacity: 0; /* Başlangıçta görünmez */
+        transition: opacity 0.5s; /* Geçiş efekti */
+        z-index: 1; /* Daha düşük z-index */
+    }
+
+    .show-background {
+        opacity: 1; /* Gösterir */
     }
 
     .backgroundcontainer {
@@ -27,89 +51,80 @@
         overflow: hidden;
         box-shadow: 0 5px 8px rgba(0, 0, 0, 1);
         padding: 25px;
-        width: 40%; 
+        width: 40%;
     }
 
-    .altformum {
-        margin-top: 20px; /* Üst formdan ayrılmasını sağlamak için margin ekliyoruz */
-        background-color: rgba(255, 255, 255, 1);
-        border-radius: 50px;
-        border-collapse: collapse;
-        overflow: hidden;
-        box-shadow: 0 5px 8px rgba(0, 0, 0, 1);
-        padding: 25px;
-        clear: both; /* Yüzen içeriklerden etkilenmemesi için clear ekliyoruz */
+    .blur-background {
+        height: 470px; /* Yüksekliği tam sayfa yapar */
+        background: rgba(255, 255, 255, 0);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0);
+        flex-wrap: wrap;
     }
 
-    .gif-fullscreen {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background-color: black;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 9999;
+    .background3 {
+        position: relative;
+        margin-left: -20px;
+        width: 103%;
+        height: 50vh;
+        background-color: black; /* Beyaz arka plan */
+        background-image: none; /* Varsayılan arka planı sıfırlayın */
+        opacity: 1; /* Başlangıçta görünmez */
+        transition: opacity 0.5s;
+        z-index: 1;
     }
 
-        .gif-fullscreen img {
-            width: 100%;
-            height: 100%;
-        }
 </style>
 
 
-@*<div id="gifContainer" class="gif-fullscreen">
-        <img src="~/Media/BURAK.gif" alt="Sinematik GIF" />
-    </div>
-
-    <div id="mainContent" style="display:none;">
-     Ana sayfa içeriği buraya gelecek
-    <h1>Hoş Geldiniz</h1>
-        <p>Bu içerik GIF oynatıldıktan sonra gösterilecektir.</p>
-
-    </div>
-*@
-
-
-<div class="backgroundcontainer" style="font-family:'Times New Roman', Times, serif; font-size:20px;">
-    <h1><strong>Burak Kurtulush</strong></h1>
+<div class="background1">
+    <h1 style="color:white;"><strong>Dynamic web solutions that engage and deliver results.</strong></h1>
     <br />
-    <div class="container">
-        <div class="container-content">
-            <h3 style="color:black;">
-                Junior <a style="color: green;"> Creative</a> Web Designer and
-                <br>
-                Software<a style="color: red;"> Developer</a>
-            </h3>
-            <br />
-            <button type="button" class="btn btn-success btn-outline-primary" style="border:none; border-radius:30px; width:200px; font-size:x-large; color:white;">Hiring</button>
+    <div>
+        <div class="container">
+            <div class="container-content">
+                <h3 style="color:white;">
+                    I can put my love of coding to work for you and your business, creating responsive websites, stunning web applications and aesthetic interfaces.
+                </h3>
+                <br />
+                <button type="button" class="btn btn-success btn-outline-primary" style="border:none; border-radius:30px; width:200px; font-size:x-large; color:white;">Contact Me</button>
+            </div>
+        </div>
+        <div class="altformum">
+            <div class="kullanilan-diller">
+                <p>HTML5</p>
+                <p>CSS3</p>
+                <p>JavaScript</p>
+                <p>ASP.NET</p>
+                <p>React.js</p>
+                <p>UI / UX</p>
+            </div>
         </div>
     </div>
 </div>
-<br />
 
 
 
-
-<div class="altformum">
-    <h1>Buraya yaptigin projelerin fotografini koyarsin</h1>
-
-</div>
-
-
-
-
-
+<!-- background2 ve background3 için boş div oluştur -->
+<div class="background2"></div>
+<div class="background3"></div>
 
 <script>
-    window.onload = function () {
-        setTimeout(function () {
-            // GIF'i gizle
-            document.getElementById('gifContainer').style.display = 'none';
-            document.getElementById('mainContent').style.display = 'block';
-            // Ana sayfa içeriğini göster
-        }, 7400); // 5 saniye sonra
-    };</script>
+    window.onscroll = function () {
+        const scrollPosition = document.body.scrollTop || document.documentElement.scrollTop;
+
+        if (scrollPosition > 200 ) {
+            document.querySelector('.background2').classList.add('show-background');
+            document.querySelector('.background3').classList.remove('show-background');
+        } else if (scrollPosition > 220) {
+            document.querySelector('.background3').classList.add('show-background');
+        } else {
+            document.querySelector('.background2').classList.remove('show-background');
+            document.querySelector('.background3').classList.remove('show-background');
+        }
+    };
+
+</script>

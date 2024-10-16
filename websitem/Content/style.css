@@ -1,0 +1,33 @@
+﻿@keyframes kaydir {
+    0% {
+        transform: translateX(100%); /* Başlangıç noktası (sağdan başla) */
+    }
+
+    100% {
+        transform: translateX(-100%); /* Sola doğru sürekli kayma */
+    }
+}
+
+.altformum {
+    margin-top: 20px;
+    margin-left: 520px;
+    width: fit-content;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 50px;
+    border-collapse: collapse;
+    overflow: hidden;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 1);
+    padding: 25px;
+    clear: both; /* Yüzen içeriklerden etkilenmemesi için clear ekliyoruz */
+    position: relative; /* Animasyon için konum ayarlaması yapıyoruz */
+}
+
+.kullanilan-diller {
+    display: flex; /* Elemanları yatay düzenliyoruz */
+    animation: kaydir 10s linear infinite; /* Animasyon ayarları */
+    white-space: nowrap; /* Satır içi düzenleme ile içeriklerin yan yana durmasını sağlarız */
+}
+
+    .kullanilan-diller p {
+        margin: 0 20px; /* Diller arasında boşluk bırakıyoruz */
+    }

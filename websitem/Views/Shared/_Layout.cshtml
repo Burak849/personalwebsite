@@ -10,6 +10,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="~/Content/style.css" />
+
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
@@ -40,10 +42,16 @@
 
 
 
-    <div class="container body-content">
+    <div class="blur-background">
         @RenderBody()
 
+
     </div>
+
+    @*<div style="height: 1500px;">
+        <p>Daha fazla içerik eklemek için bu alanı doldurun.</p>
+    </div>*@
+
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
