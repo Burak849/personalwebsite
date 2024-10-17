@@ -149,8 +149,12 @@
     <Content Include="Content\Site.css" />
     <Content Include="Media\B.png" />
     <Content Include="Media\background2.jpg" />
-    <Content Include="Media\BURAK.gif" />
+    <Content Include="Media\csharp-logo-265a149e.svg" />
     <Content Include="Media\file.png" />
+    <Content Include="Media\mssql-server.png" />
+    <Content Include="Media\node.png" />
+    <Content Include="Media\pngwing.com.png" />
+    <Content Include="Media\sql-server-logo-white.png" />
     <Content Include="Media\starry.svg" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />

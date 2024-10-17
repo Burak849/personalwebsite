@@ -21,8 +21,8 @@
     }
 
     .background1 {
-        position: relative; 
-        padding:40px;
+        position: relative;
+        padding: 40px;
         margin: 0;
         width: 100%;
     }
@@ -37,6 +37,7 @@
         opacity: 0; /* Başlangıçta görünmez */
         transition: opacity 0.5s; /* Geçiş efekti */
         z-index: 1; /* Daha düşük z-index */
+        align-items: center;
     }
 
     .show-background {
@@ -74,9 +75,23 @@
         background-image: none; /* Varsayılan arka planı sıfırlayın */
         opacity: 1; /* Başlangıçta görünmez */
         transition: opacity 0.5s;
+        color:white;
         z-index: 1;
     }
 
+    .card-container {
+        display: flex;
+        flex-wrap: wrap; /* Kartların sığmadığında alt satıra geçmesini sağlar */
+        gap: 21px; /* Kartlar arasında boşluk bırakır */
+        margin-top: 400px;
+        flex-direction: row;
+    }
+
+    .card {
+        flex: 1 1 18rem; /* Kartların sabit genişlikte kalmasını sağlar */
+        background: transparent;
+        color: white;
+    }
 </style>
 
 
@@ -109,14 +124,199 @@
 
 
 <!-- background2 ve background3 için boş div oluştur -->
-<div class="background2"></div>
-<div class="background3"></div>
+<div class="background2">
+    <div class="o-page">
+        <div class="skill-set">
+
+
+
+
+            <!-- interactive -->
+
+            <a href="#" class="skill-outer interactive">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160">
+                    <g opacity=".87" fill="none" stroke="#fff">
+                        <text class="text" transform="translate(27.19 146.24)" fill="#fff" stroke="none" font-size="16" font-family="RobotoMono-Medium,Roboto Mono" font-weight="500">
+                            Interactive
+                        </text>
+                        <path class="ellipse4" />
+                        <path class="ellipse3" />
+                        <path class="ellipse2" />
+                        <path class="ellipse1" />
+                        <path class="ellipse0" />
+                        <path class="ellipse" d="M68,61.83a12,12 0 1,0 24,0a12,12 0 1,0 -24,0" stroke-miterlimit="10" fill="#fff" opacity="0.87" />
+                        <path class="hand" d="M100.33 82.21a5.82 5.82 0 0 0-3.66.19c-.08-.93-.46-3.07-2.32-3.64a5.83 5.83 0 0 0-3.74.21 3.59 3.59 0 0 0-2.24-3 5.85 5.85 0 0 0-3.64.17v-7.68c0-2-.83-5.44-4-5.44-2.91 0-4 3.25-4 5.44v17.08C75.34 84.12 73 82.13 71.14 82c-3-.24-5.19 1.64-4.59 4.56s3.12 2.75 5 5.14 6.34 9.81 6.37 9.86c.67 1.26 2.49 4.74 2.79 5.62a12 12 0 0 1 .27 3.09.79.79 0 0 0 .22.55.76.76 0 0 0 .54.23h17.18a.77.77 0 0 0 .76-.68 17.08 17.08 0 0 0 0-2.73 5.5 5.5 0 0 1 1.32-3.84 11.61 11.61 0 0 0 1.63-4.52.41.41 0 0 0 0-.11V86.28c.04-.28-.01-3.35-2.3-4.07z" fill="#121212" stroke="#fff" stroke-miterlimit="10" />
+                        <path class="bar" d="M96.68 88.8v-6.4" />
+                        <path class="bar" d="M90.61 87.29v-8.36" />
+                        <path class="bar" d="M84.73 86.74V76.13" />
+                        <path class="bar" d="M76.79 87.94v-2.39" />
+                    </g>
+                </svg>
+            </a>
+
+
+            <!-- graphic -->
+            <a href="#" class="skill-outer graphic">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160">
+                    <g opacity=".87" fill="none" stroke="#fff">
+                        <text id="text" fill="#fff" font-family="RobotoMono-Medium,Roboto Mono" font-size="16px" font-weight="500" stroke="none" transform="translate(46.39 146.24)">
+                            Aesthetic
+                        </text>
+                        <path class="graphic-shape2" d="M68.54 60.66h60v60h-60z" />
+                        <path class="graphic-middle" d="M68.54 91h.31a30 30 0 0 0 30-30v-.31H68.54z" />
+                        <path class="graphic-shape1" d="M68.85 31a30 30 0 0 1 30 30 30 30 0 0 1-30 30 30 30 0 0 1-30-30 30 30 0 0 1 30-30z" />
+                        <circle class="graphic-dot1" cx="" cy="" r="3" fill="#fff" stroke="transparent" />
+                        <circle class="graphic-dot2" cx="" cy="" r="3" fill="#fff" stroke="transparent" />
+                    </g>
+                </svg>
+            </a>
+
+            <!-- 	typo -->
+            <a href="#" class="skill-outer typo">
+                <svg class="typo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160">
+                    <g pacity=".87" fill="none" stroke="#fff">
+                        <text class="text" transform="translate(31.99 146.24)" fill="#fff" stroke="none" font-size="16" font-family="RobotoMono-Medium,Roboto Mono" font-weight="500">
+                            Typography
+                        </text>
+                        <path class="typo-right-under" fill="#fff" d="M112.06 111.91a6.21 6.21 0 0 1-.4-1.13c-.11-.43-.2-.88-.28-1.36a8.58 8.58 0 0 1-1.31 1.14 9.37 9.37 0 0 1-1.65.92 9.56 9.56 0 0 1-2 .62 10.91 10.91 0 0 1-2.34.2 11.35 11.35 0 0 1-3.73-.63 9 9 0 0 1-2.9-1.67 7.41 7.41 0 0 1-2.53-5.73 7.57 7.57 0 0 1 3.21-6.45c2.11-1.51 5.23-2.23 9.37-2.18h3.81V94.1a3.87 3.87 0 0 0-1.21-3 5.27 5.27 0 0 0-3.59-1.16 4.34 4.34 0 0 0-3.06.86 3.11 3.11 0 0 0-1 2.38l-6.82-.08a7.17 7.17 0 0 1 .78-3.21 8.09 8.09 0 0 1 2.22-2.65 10.89 10.89 0 0 1 3.54-1.78 15.18 15.18 0 0 1 4.76-.62 16.75 16.75 0 0 1 4.47.64 10.88 10.88 0 0 1 3.6 1.74 8 8 0 0 1 2.35 2.94 9.13 9.13 0 0 1 .81 4.08l-.16 11.39a18.69 18.69 0 0 0 .23 3.53 8.61 8.61 0 0 0 .75 2.42v.42zm-6.44-4.91a6.91 6.91 0 0 0 1.91-.22 6.83 6.83 0 0 0 1.61-.62 5.51 5.51 0 0 0 1.24-.88 4.67 4.67 0 0 0 .82-1v-4.56h-3.48a10.37 10.37 0 0 0-2.72.28 5.28 5.28 0 0 0-1.85.83 3.46 3.46 0 0 0-1.07 1.32 4.05 4.05 0 0 0-.37 1.68 3 3 0 0 0 1 2.29 4.12 4.12 0 0 0 2.91.88z" />
+                        <path class="typo-left-under" fill="#fff" d="M77.28 94H54.91l-5.38 17.35H41l21.63-67h7.14l21.27 67h-8.46zm-20.07-7.44H75l-8.81-29.09z" />
+                        <path class="wave-middle" stroke="transparent" fill="#121212" />
+                        <path class="typo-right-top" stroke="#fff" d="M112.06 111.91a6.21 6.21 0 0 1-.4-1.13c-.11-.43-.2-.88-.28-1.36a8.58 8.58 0 0 1-1.31 1.14 9.37 9.37 0 0 1-1.65.92 9.56 9.56 0 0 1-2 .62 10.91 10.91 0 0 1-2.34.2 11.35 11.35 0 0 1-3.73-.63 9 9 0 0 1-2.9-1.67 7.41 7.41 0 0 1-2.53-5.73 7.57 7.57 0 0 1 3.21-6.45c2.11-1.51 5.23-2.23 9.37-2.18h3.81V94.1a3.87 3.87 0 0 0-1.21-3 5.27 5.27 0 0 0-3.59-1.16 4.34 4.34 0 0 0-3.06.86 3.11 3.11 0 0 0-1 2.38l-6.82-.08a7.17 7.17 0 0 1 .78-3.21 8.09 8.09 0 0 1 2.22-2.65 10.89 10.89 0 0 1 3.54-1.78 15.18 15.18 0 0 1 4.76-.62 16.75 16.75 0 0 1 4.47.64 10.88 10.88 0 0 1 3.6 1.74 8 8 0 0 1 2.35 2.94 9.13 9.13 0 0 1 .81 4.08l-.16 11.39a18.69 18.69 0 0 0 .23 3.53 8.61 8.61 0 0 0 .75 2.42v.42zm-6.44-4.91a6.91 6.91 0 0 0 1.91-.22 6.83 6.83 0 0 0 1.61-.62 5.51 5.51 0 0 0 1.24-.88 4.67 4.67 0 0 0 .82-1v-4.56h-3.48a10.37 10.37 0 0 0-2.72.28 5.28 5.28 0 0 0-1.85.83 3.46 3.46 0 0 0-1.07 1.32 4.05 4.05 0 0 0-.37 1.68 3 3 0 0 0 1 2.29 4.12 4.12 0 0 0 2.91.88z" />
+                        <path class="typo-left-top" d="M77.28 94H54.91l-5.38 17.35H41l21.63-67h7.14l21.27 67h-8.46zm-20.07-7.44H75l-8.81-29.09z" />
+                    </g>
+                </svg>
+            </a>
+
+            <!-- code -->
+            <a href="#" class="skill-outer code">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160">
+                    <g opacity=".87" fill="none" stroke="#fff">
+                        <text class="text" transform="translate(50 150.11)" font-size="16" fill="#fff" stroke="none" font-family="RobotoMono-Medium,Roboto Mono" font-weight="500">
+                            Code
+                        </text>
+                        <!-- Rectangular block for code design -->
+                        <rect class="code-rect" x="40" y="40" width="80" height="80" stroke="#fff" stroke-width="5" />
+                        <!-- Code symbol (</>) -->
+                        <text class="code-symbol" x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-size="24" fill="#fff" font-family="Roboto, sans-serif"></text>
+                    </g>
+                </svg>
+            </a>
+
+
+            <!-- Dynamic -->
+            <a href="#" class="skill-outer dynamic">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160">
+                    <g opacity=".87" fill="none" stroke="#fff">
+                        <text class="text" transform="translate(50 150.11)" font-size="16" fill="#fff" stroke="none" font-family="RobotoMono-Medium,Roboto Mono" font-weight="500">
+                            Dynamic
+                        </text>
+                        <!-- Circle representing dynamic movement -->
+                        <circle class="dynamic-circle" cx="80" cy="80" r="40" stroke="#fff" stroke-width="5" />
+                        <!-- Dynamic movement line -->
+                        <line x1="30" y1="40" x2="130" y2="120" stroke-width="5" stroke="#fff" class="dynamic-line" />
+                    </g>
+                </svg>
+            </a>
+
+            <!-- Effective -->
+            <a href="#" class="skill-outer effective">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160">
+                    <g opacity=".87" fill="none" stroke="#fff">
+                        <text class="text" transform="translate(50 150.11)" font-size="16" fill="#fff" stroke="none" font-family="RobotoMono-Medium,Roboto Mono" font-weight="500">
+                            Effective
+                        </text>
+                        <!-- Rectangular block for effective design -->
+                        <rect class="effective-rect" x="40" y="40" width="80" height="80" stroke="#fff" stroke-width="5" />
+                        <!-- Checkmark for success -->
+                        <path d="M60 90 L75 105 L100 75" stroke="#fff" stroke-width="5" fill="none" class="checkmark" />
+                    </g>
+                </svg>
+            </a>
+
+
+        </div>
+
+        <div class="card-container">
+            <div class="card" style="width: 18rem;">
+                <img src="~/Media/csharp-logo-265a149e.svg" class="card-img-top" alt="csharp">
+                <div class="card-body">
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="~/Media/pngwing.com.png" class="card-img-top" alt="mongodb">
+                <div class="card-body">
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="~/Media/sql-server-logo-white.png" class="card-img-top" alt="mssql">
+                <div class="card-body">
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="~/Media/node.png" class="card-img-top" alt="node">
+                <div class="card-body">
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+</div>
+
+
+
+
+<div class="background3">
+    <h2 class="text-center">İletişim Formu</h2>
+    <form>
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label for="name" class="form-label">Ad Soyad</label>
+                <input type="text" class="form-control" id="name" placeholder="Adınızı ve soyadınızı girin" required>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="email" class="form-label">E-posta</label>
+                <input type="email" class="form-control" id="email" placeholder="E-posta adresinizi girin" required>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label for="subject" class="form-label">Konu</label>
+                <input type="text" class="form-control" id="subject" placeholder="Konu başlığını girin" required>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="message" class="form-label">Mesajınız</label>
+                <textarea class="form-control" id="message" rows="5" placeholder="Mesajınızı buraya yazın" required></textarea>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 text-center">
+                <button type="submit" class="btn btn-primary">Gönder</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<!-- Bootstrap JS (Optional for functionality like modals, dropdowns, etc.) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+
 
 <script>
     window.onscroll = function () {
         const scrollPosition = document.body.scrollTop || document.documentElement.scrollTop;
 
-        if (scrollPosition > 200 ) {
+        if (scrollPosition > 200) {
             document.querySelector('.background2').classList.add('show-background');
             document.querySelector('.background3').classList.remove('show-background');
         } else if (scrollPosition > 220) {
@@ -126,5 +326,17 @@
             document.querySelector('.background3').classList.remove('show-background');
         }
     };
+
+
+    const codeSymbol = document.querySelector('.code-symbol');
+    const codeTexts = ['</>', 'CSS', 'SASS', 'JS', 'HTML'];
+    let codeIndex = 0;
+
+    setInterval(() => {
+        codeSymbol.textContent = codeTexts[codeIndex];
+        codeIndex = (codeIndex + 1) % codeTexts.length;
+    }, 3000); // Her 3 saniyede bir metni değiştirir.
+
+
 
 </script>
