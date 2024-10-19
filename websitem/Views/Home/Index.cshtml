@@ -21,27 +21,46 @@
     }
 
     .background1 {
+        display: flex;
         position: relative;
         padding: 40px;
         margin: 0;
         width: 100%;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
     }
 
     .background2 {
         position: relative; /* Pozisyonu relative yap */
         margin-left: -20px;
-        margin-top: 50vh; /* İlk arka planın altında yer alacak şekilde ayarla */
+        margin-top: 58vh; /* İlk arka planın altında yer alacak şekilde ayarla */
         width: 103%;
-        height: 120vh; /* Tüm görünüm yüksekliğini kaplar */
+        height: 50vh; /* Tüm görünüm yüksekliğini kaplar */
         background-color: #000017;
         opacity: 0; /* Başlangıçta görünmez */
         transition: opacity 0.5s; /* Geçiş efekti */
-        z-index: 1; /* Daha düşük z-index */
+        z-index: 2; /* Daha düşük z-index */
         align-items: center;
     }
 
+    .background2a {
+        position: relative;
+        margin-left: -20px;
+        width: 103%;
+        height: 100vh;
+        background-color: white; /* Beyaz arka plan */
+        background-image: none; /* Varsayılan arka planı sıfırlayın */
+        opacity: 1; /* Başlangıçta görünmez */
+        transition: opacity 0.5s;
+        color: black;
+        z-index: 3;
+    }
+
     .show-background {
-        opacity: 1; /* Gösterir */
+        opacity: 1;
     }
 
     .backgroundcontainer {
@@ -56,7 +75,7 @@
     }
 
     .blur-background {
-        height: 470px; /* Yüksekliği tam sayfa yapar */
+        height: 330px; /* Yüksekliği tam sayfa yapar */
         background: rgba(255, 255, 255, 0);
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
@@ -67,31 +86,101 @@
     }
 
     .background3 {
-        position: relative;
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
         margin-left: -20px;
         width: 103%;
-        height: 50vh;
+        height: 90vh;
         background-color: black; /* Beyaz arka plan */
         background-image: none; /* Varsayılan arka planı sıfırlayın */
         opacity: 1; /* Başlangıçta görünmez */
         transition: opacity 0.5s;
-        color:white;
-        z-index: 1;
+        color: white;
+        z-index: 4;
+        align-items: flex-start;
     }
+
+        .background3 ol, .background3 ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
 
     .card-container {
         display: flex;
         flex-wrap: wrap; /* Kartların sığmadığında alt satıra geçmesini sağlar */
         gap: 21px; /* Kartlar arasında boşluk bırakır */
-        margin-top: 400px;
+        margin-top: 45px;
         flex-direction: row;
+        align-items: center;
     }
 
     .card {
         flex: 1 1 18rem; /* Kartların sabit genişlikte kalmasını sağlar */
         background: transparent;
         color: white;
+        align-items: center;
     }
+    .services-container {
+        display: flex;
+        justify-content: space-between; /* Alanı eşit olarak dağıtır */
+        margin-top: 20px; /* Üstte biraz boşluk */
+    }
+
+    .service-item {
+        flex: 1; /* Her bir öğe eşit genişlikte olacak şekilde ayarlanır */
+        margin: 0 10px; /* Sağ ve sol kenarlarda boşluk ekler */
+        text-align: center; /* Metni ortalar */
+    }
+    h4{
+        margin-bottom:10px;
+    }
+    .background3 .flex {
+        gap: 14rem;
+        transition: color 2.5s 0.5s ease-in;
+    }
+    .wrapper {
+        max-width: 90rem;
+        padding: 0 1.33rem;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+    }
+
+    .between {
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
+    .flex {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .color-light {
+        color: #f1faee;
+    }
+    a[class] {
+        text-decoration-color: transparent;
+        transition: all 0.2s 0s ease-in-out;
+    }
+    .social-media {
+        display: flex; /* Flexbox ile öğeleri yan yana yerleştirir */
+        justify-content: center; /* Öğeleri yatayda ortalar */
+        gap: 15px; /* İkonlar arasında boşluk bırakır */
+    }
+
+    .social-link img {
+        transition: transform 0.3s; /* Hover efektine geçiş */
+    }
+
+    .social-link:hover img {
+        transform: scale(1.1); /* Hover esnasında ikon boyutunu büyütür */
+    }
+
 </style>
 
 
@@ -105,17 +194,7 @@
                     I can put my love of coding to work for you and your business, creating responsive websites, stunning web applications and aesthetic interfaces.
                 </h3>
                 <br />
-                <button type="button" class="btn btn-success btn-outline-primary" style="border:none; border-radius:30px; width:200px; font-size:x-large; color:white;">Contact Me</button>
-            </div>
-        </div>
-        <div class="altformum">
-            <div class="kullanilan-diller">
-                <p>HTML5</p>
-                <p>CSS3</p>
-                <p>JavaScript</p>
-                <p>ASP.NET</p>
-                <p>React.js</p>
-                <p>UI / UX</p>
+                <button type="button" class="btn btn-success btn-outline-primary" style="border:none; margin-left:500px; border-radius:30px; width:200px; font-size:x-large; color:white;">Contact Me</button>
             </div>
         </div>
     </div>
@@ -123,118 +202,10 @@
 
 
 
+
 <!-- background2 ve background3 için boş div oluştur -->
 <div class="background2">
     <div class="o-page">
-        <div class="skill-set">
-
-
-
-
-            <!-- interactive -->
-
-            <a href="#" class="skill-outer interactive">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160">
-                    <g opacity=".87" fill="none" stroke="#fff">
-                        <text class="text" transform="translate(27.19 146.24)" fill="#fff" stroke="none" font-size="16" font-family="RobotoMono-Medium,Roboto Mono" font-weight="500">
-                            Interactive
-                        </text>
-                        <path class="ellipse4" />
-                        <path class="ellipse3" />
-                        <path class="ellipse2" />
-                        <path class="ellipse1" />
-                        <path class="ellipse0" />
-                        <path class="ellipse" d="M68,61.83a12,12 0 1,0 24,0a12,12 0 1,0 -24,0" stroke-miterlimit="10" fill="#fff" opacity="0.87" />
-                        <path class="hand" d="M100.33 82.21a5.82 5.82 0 0 0-3.66.19c-.08-.93-.46-3.07-2.32-3.64a5.83 5.83 0 0 0-3.74.21 3.59 3.59 0 0 0-2.24-3 5.85 5.85 0 0 0-3.64.17v-7.68c0-2-.83-5.44-4-5.44-2.91 0-4 3.25-4 5.44v17.08C75.34 84.12 73 82.13 71.14 82c-3-.24-5.19 1.64-4.59 4.56s3.12 2.75 5 5.14 6.34 9.81 6.37 9.86c.67 1.26 2.49 4.74 2.79 5.62a12 12 0 0 1 .27 3.09.79.79 0 0 0 .22.55.76.76 0 0 0 .54.23h17.18a.77.77 0 0 0 .76-.68 17.08 17.08 0 0 0 0-2.73 5.5 5.5 0 0 1 1.32-3.84 11.61 11.61 0 0 0 1.63-4.52.41.41 0 0 0 0-.11V86.28c.04-.28-.01-3.35-2.3-4.07z" fill="#121212" stroke="#fff" stroke-miterlimit="10" />
-                        <path class="bar" d="M96.68 88.8v-6.4" />
-                        <path class="bar" d="M90.61 87.29v-8.36" />
-                        <path class="bar" d="M84.73 86.74V76.13" />
-                        <path class="bar" d="M76.79 87.94v-2.39" />
-                    </g>
-                </svg>
-            </a>
-
-
-            <!-- graphic -->
-            <a href="#" class="skill-outer graphic">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160">
-                    <g opacity=".87" fill="none" stroke="#fff">
-                        <text id="text" fill="#fff" font-family="RobotoMono-Medium,Roboto Mono" font-size="16px" font-weight="500" stroke="none" transform="translate(46.39 146.24)">
-                            Aesthetic
-                        </text>
-                        <path class="graphic-shape2" d="M68.54 60.66h60v60h-60z" />
-                        <path class="graphic-middle" d="M68.54 91h.31a30 30 0 0 0 30-30v-.31H68.54z" />
-                        <path class="graphic-shape1" d="M68.85 31a30 30 0 0 1 30 30 30 30 0 0 1-30 30 30 30 0 0 1-30-30 30 30 0 0 1 30-30z" />
-                        <circle class="graphic-dot1" cx="" cy="" r="3" fill="#fff" stroke="transparent" />
-                        <circle class="graphic-dot2" cx="" cy="" r="3" fill="#fff" stroke="transparent" />
-                    </g>
-                </svg>
-            </a>
-
-            <!-- 	typo -->
-            <a href="#" class="skill-outer typo">
-                <svg class="typo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160">
-                    <g pacity=".87" fill="none" stroke="#fff">
-                        <text class="text" transform="translate(31.99 146.24)" fill="#fff" stroke="none" font-size="16" font-family="RobotoMono-Medium,Roboto Mono" font-weight="500">
-                            Typography
-                        </text>
-                        <path class="typo-right-under" fill="#fff" d="M112.06 111.91a6.21 6.21 0 0 1-.4-1.13c-.11-.43-.2-.88-.28-1.36a8.58 8.58 0 0 1-1.31 1.14 9.37 9.37 0 0 1-1.65.92 9.56 9.56 0 0 1-2 .62 10.91 10.91 0 0 1-2.34.2 11.35 11.35 0 0 1-3.73-.63 9 9 0 0 1-2.9-1.67 7.41 7.41 0 0 1-2.53-5.73 7.57 7.57 0 0 1 3.21-6.45c2.11-1.51 5.23-2.23 9.37-2.18h3.81V94.1a3.87 3.87 0 0 0-1.21-3 5.27 5.27 0 0 0-3.59-1.16 4.34 4.34 0 0 0-3.06.86 3.11 3.11 0 0 0-1 2.38l-6.82-.08a7.17 7.17 0 0 1 .78-3.21 8.09 8.09 0 0 1 2.22-2.65 10.89 10.89 0 0 1 3.54-1.78 15.18 15.18 0 0 1 4.76-.62 16.75 16.75 0 0 1 4.47.64 10.88 10.88 0 0 1 3.6 1.74 8 8 0 0 1 2.35 2.94 9.13 9.13 0 0 1 .81 4.08l-.16 11.39a18.69 18.69 0 0 0 .23 3.53 8.61 8.61 0 0 0 .75 2.42v.42zm-6.44-4.91a6.91 6.91 0 0 0 1.91-.22 6.83 6.83 0 0 0 1.61-.62 5.51 5.51 0 0 0 1.24-.88 4.67 4.67 0 0 0 .82-1v-4.56h-3.48a10.37 10.37 0 0 0-2.72.28 5.28 5.28 0 0 0-1.85.83 3.46 3.46 0 0 0-1.07 1.32 4.05 4.05 0 0 0-.37 1.68 3 3 0 0 0 1 2.29 4.12 4.12 0 0 0 2.91.88z" />
-                        <path class="typo-left-under" fill="#fff" d="M77.28 94H54.91l-5.38 17.35H41l21.63-67h7.14l21.27 67h-8.46zm-20.07-7.44H75l-8.81-29.09z" />
-                        <path class="wave-middle" stroke="transparent" fill="#121212" />
-                        <path class="typo-right-top" stroke="#fff" d="M112.06 111.91a6.21 6.21 0 0 1-.4-1.13c-.11-.43-.2-.88-.28-1.36a8.58 8.58 0 0 1-1.31 1.14 9.37 9.37 0 0 1-1.65.92 9.56 9.56 0 0 1-2 .62 10.91 10.91 0 0 1-2.34.2 11.35 11.35 0 0 1-3.73-.63 9 9 0 0 1-2.9-1.67 7.41 7.41 0 0 1-2.53-5.73 7.57 7.57 0 0 1 3.21-6.45c2.11-1.51 5.23-2.23 9.37-2.18h3.81V94.1a3.87 3.87 0 0 0-1.21-3 5.27 5.27 0 0 0-3.59-1.16 4.34 4.34 0 0 0-3.06.86 3.11 3.11 0 0 0-1 2.38l-6.82-.08a7.17 7.17 0 0 1 .78-3.21 8.09 8.09 0 0 1 2.22-2.65 10.89 10.89 0 0 1 3.54-1.78 15.18 15.18 0 0 1 4.76-.62 16.75 16.75 0 0 1 4.47.64 10.88 10.88 0 0 1 3.6 1.74 8 8 0 0 1 2.35 2.94 9.13 9.13 0 0 1 .81 4.08l-.16 11.39a18.69 18.69 0 0 0 .23 3.53 8.61 8.61 0 0 0 .75 2.42v.42zm-6.44-4.91a6.91 6.91 0 0 0 1.91-.22 6.83 6.83 0 0 0 1.61-.62 5.51 5.51 0 0 0 1.24-.88 4.67 4.67 0 0 0 .82-1v-4.56h-3.48a10.37 10.37 0 0 0-2.72.28 5.28 5.28 0 0 0-1.85.83 3.46 3.46 0 0 0-1.07 1.32 4.05 4.05 0 0 0-.37 1.68 3 3 0 0 0 1 2.29 4.12 4.12 0 0 0 2.91.88z" />
-                        <path class="typo-left-top" d="M77.28 94H54.91l-5.38 17.35H41l21.63-67h7.14l21.27 67h-8.46zm-20.07-7.44H75l-8.81-29.09z" />
-                    </g>
-                </svg>
-            </a>
-
-            <!-- code -->
-            <a href="#" class="skill-outer code">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160">
-                    <g opacity=".87" fill="none" stroke="#fff">
-                        <text class="text" transform="translate(50 150.11)" font-size="16" fill="#fff" stroke="none" font-family="RobotoMono-Medium,Roboto Mono" font-weight="500">
-                            Code
-                        </text>
-                        <!-- Rectangular block for code design -->
-                        <rect class="code-rect" x="40" y="40" width="80" height="80" stroke="#fff" stroke-width="5" />
-                        <!-- Code symbol (</>) -->
-                        <text class="code-symbol" x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-size="24" fill="#fff" font-family="Roboto, sans-serif"></text>
-                    </g>
-                </svg>
-            </a>
-
-
-            <!-- Dynamic -->
-            <a href="#" class="skill-outer dynamic">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160">
-                    <g opacity=".87" fill="none" stroke="#fff">
-                        <text class="text" transform="translate(50 150.11)" font-size="16" fill="#fff" stroke="none" font-family="RobotoMono-Medium,Roboto Mono" font-weight="500">
-                            Dynamic
-                        </text>
-                        <!-- Circle representing dynamic movement -->
-                        <circle class="dynamic-circle" cx="80" cy="80" r="40" stroke="#fff" stroke-width="5" />
-                        <!-- Dynamic movement line -->
-                        <line x1="30" y1="40" x2="130" y2="120" stroke-width="5" stroke="#fff" class="dynamic-line" />
-                    </g>
-                </svg>
-            </a>
-
-            <!-- Effective -->
-            <a href="#" class="skill-outer effective">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160">
-                    <g opacity=".87" fill="none" stroke="#fff">
-                        <text class="text" transform="translate(50 150.11)" font-size="16" fill="#fff" stroke="none" font-family="RobotoMono-Medium,Roboto Mono" font-weight="500">
-                            Effective
-                        </text>
-                        <!-- Rectangular block for effective design -->
-                        <rect class="effective-rect" x="40" y="40" width="80" height="80" stroke="#fff" stroke-width="5" />
-                        <!-- Checkmark for success -->
-                        <path d="M60 90 L75 105 L100 75" stroke="#fff" stroke-width="5" fill="none" class="checkmark" />
-                    </g>
-                </svg>
-            </a>
-
-
-        </div>
 
         <div class="card-container">
             <div class="card" style="width: 18rem;">
@@ -252,7 +223,7 @@
             <div class="card" style="width: 18rem;">
                 <img src="~/Media/sql-server-logo-white.png" class="card-img-top" alt="mssql">
                 <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <p class="card-text" style="margin-top:20px;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 </div>
             </div>
             <div class="card" style="width: 18rem;">
@@ -262,50 +233,167 @@
                 </div>
             </div>
         </div>
-
-
-
     </div>
-
-
-
-
-
 </div>
 
 
 
+<div class="background2a">
 
-<div class="background3">
-    <h2 class="text-center">İletişim Formu</h2>
-    <form>
-        <div class="row">
-            <div class="col-md-6 mb-3">
-                <label for="name" class="form-label">Ad Soyad</label>
-                <input type="text" class="form-control" id="name" placeholder="Adınızı ve soyadınızı girin" required>
-            </div>
-            <div class="col-md-6 mb-3">
-                <label for="email" class="form-label">E-posta</label>
-                <input type="email" class="form-control" id="email" placeholder="E-posta adresinizi girin" required>
+    <article class="[ bg-light ] [ panel ] [ services ]" id="main-content">
+        <div class="wrapper flow">
+
+            <h2 class="headline flow-space-600">Bringing <span class="func"><b class="weight-bold color-secondary">functionality</b></span> <br />to your<b class="dimmed"> Web </b>specifications.</h2>
+
+            <p>
+                Do you have an impressive website concept, but it still feels more like a sketch than a fully developed platform? <br />
+                Perhaps you're looking to establish an online presence for your business or launch an e-commerce site but aren’t sure how to proceed.
+            </p>
+            <p>
+                Win over your customers and investors with an engaging online experience that not only meets but exceeds their expectations.
+            </p>
+            <p>I’m here to help you bring that vision to life.</p>
+
+            <div class="key-facts flow-space-major">
+
+                <h3 class="text-700" style="margin-bottom: 4.2rem">Here’s how...</h3>
+                <ol class="[ key-facts__list ] [ auto-grid ]">
+
+                    <li class="flow">
+                        <a href="#" class="skill-outer interactive">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160">
+                                <g fill="none" stroke="#fff" opacity="0.87">
+                                    <!-- Ellipses -->
+                                    <path class="ellipse4" />
+                                    <path class="ellipse3" />
+                                    <path class="ellipse2" />
+                                    <path class="ellipse1" />
+                                    <path class="ellipse0" />
+                                    <!-- Center Circle -->
+                                    <path class="ellipse" d="M68,61.83a12,12 0 1,0 24,0a12,12 0 1,0 -24,0" stroke-miterlimit="10" fill="#fff" />
+                                    <!-- Hand Icon -->
+                                    <path class="hand" d="M100.33 82.21a5.82 5.82 0 0 0-3.66.19c-.08-.93-.46-3.07-2.32-3.64a5.83 5.83 0 0 0-3.74.21 3.59 3.59 0 0 0-2.24-3 5.85 5.85 0 0 0-3.64.17v-7.68c0-2-.83-5.44-4-5.44-2.91 0-4 3.25-4 5.44v17.08C75.34 84.12 73 82.13 71.14 82c-3-.24-5.19 1.64-4.59 4.56s3.12 2.75 5 5.14 6.34 9.81 6.37 9.86c.67 1.26 2.49 4.74 2.79 5.62a12 12 0 0 1 .27 3.09.79.79 0 0 0 .22.55.76.76 0 0 0 .54.23h17.18a.77.77 0 0 0 .76-.68 17.08 17.08 0 0 0 0-2.73 5.5 5.5 0 0 1 1.32-3.84 11.61 11.61 0 0 0 1.63-4.52v-2.84c.04-.28-.01-3.35-2.3-4.07z" fill="#121212" stroke-miterlimit="10" />
+                                    <!-- Bars -->
+                                    <path class="bar" d="M96.68 88.8v-6.4" />
+                                    <path class="bar" d="M90.61 87.29v-8.36" />
+                                    <path class="bar" d="M84.73 86.74V76.13" />
+                                    <path class="bar" d="M76.79 87.94v-2.39" />
+                                </g>
+                            </svg>
+                        </a>
+                        <h3 style="color:white;" class="flow-space-600 font-sans color-primary-shade">Interactive</h3>
+                        <p style="color:white;" class="flow-space-600 color-dark-glare">
+                            User flow diagrams, concept sketches, wireframes, high-fidelity mockups and full app UI designs.
+                        </p>
+                    </li>
+
+
+                    <li class="flow">
+                        <!-- Dynamic -->
+                        <a href="#" class="skill-outer dynamic">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160">
+                                <g opacity=".87" fill="none" stroke="#fff">
+                                    <!-- Circle representing dynamic movement -->
+                                    <circle class="dynamic-circle" cx="80" cy="80" r="40" stroke="#fff" stroke-width="5" />
+                                    <!-- Dynamic movement line -->
+                                    <line x1="30" y1="40" x2="130" y2="120" stroke-width="5" stroke="#fff" class="dynamic-line" />
+                                </g>
+                            </svg>
+                        </a>
+                        <h3 style="color:white;" class="flow-space-600 font-sans color-primary-shade">
+                            Dynamic
+                        </h3>
+                        <p style="color:white;" class="flow-space-600 color-dark-glare">Corporate sites, webshops and more. Need it built in Wordpress, React, Svelte, Jekyll, 11ty or plain ol' HTML? I gotchu.</p>
+
+                    </li>
+
+                    <li class="flow">
+
+                        <a href="#" class="skill-outer graphic">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160">
+                                <g opacity=".87" fill="none" stroke="#fff">
+                                    <path class="graphic-shape2" d="M68.54 60.66h60v60h-60z" />
+                                    <path class="graphic-middle" d="M68.54 91h.31a30 30 0 0 0 30-30v-.31H68.54z" />
+                                    <path class="graphic-shape1" d="M68.85 31a30 30 0 0 1 30 30 30 30 0 0 1-30 30 30 30 0 0 1-30-30 30 30 0 0 1 30-30z" />
+                                    <circle class="graphic-dot1" cx="" cy="" r="3" fill="#fff" stroke="transparent" />
+                                    <circle class="graphic-dot2" cx="" cy="" r="3" fill="#fff" stroke="transparent" />
+                                </g>
+                            </svg>
+                        </a>
+                        <h3 class="flow-space-600 font-sans color-primary-shade" style="color:white;">
+                            Aesthetic
+                        </h3>
+                        <p class="flow-space-600 color-dark-glare" style="color:white;">Quizzes, e-learning, kiosk apps, web games and what-have-you. I'll gladly think along with you.</p>
+                    </li>
+
+                </ol>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-6 mb-3">
-                <label for="subject" class="form-label">Konu</label>
-                <input type="text" class="form-control" id="subject" placeholder="Konu başlığını girin" required>
-            </div>
-            <div class="col-md-6 mb-3">
-                <label for="message" class="form-label">Mesajınız</label>
-                <textarea class="form-control" id="message" rows="5" placeholder="Mesajınızı buraya yazın" required></textarea>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12 text-center">
-                <button type="submit" class="btn btn-primary">Gönder</button>
-            </div>
-        </div>
-    </form>
+    </article>
 </div>
+
+<footer role="contentinfo" class="background3">
+    <article class="panel">
+        <div class="[ wrapper ] [ flex between ]" style="font-size:25px;">
+
+            <div class="[ about tagline ]">
+                <h3 class="text-start">
+                    <a><i><b>Burak Kurtulush</b></i></a>
+                </h3>
+                <p class="text-start">
+                    <span>Junior Web Developer</span>
+                </p>
+            </div>
+
+            <div class="gap-top-600">
+                <ol>
+                    <li>Frontend Development</li>
+                    <li>Websites & Web Apps</li>
+                    <li>Backend Development</li>
+                    <li>Data Management</li>
+                </ol>
+            </div>
+
+
+            <address class="gap-top-600">
+                <span>
+                    Tekke Mahallesi Ormo Sokak No:25<br />
+                    Orhangazi · Bursa<br /><br />
+                </span>
+                <a id="mail" class="color-light" href="mailto:burakkurtulus018@gmail.com">burakkurtulus018@gmail.com</a><br /><br />
+                <a href="tel:+905386447092" class="color-light">+90 538 644 7092</a>
+            </address>
+
+            <div class="social-media text-center gap-top-600">
+                <h5>Social Media:</h5>
+                <a href="https://github.com/Burak849" target="_blank" class="social-link">
+                    <img src="~/Media/githubicon.png" alt="GitHub" width="30" height="30" />
+                </a>
+                <a href="https://linkedin.com/in/burak-kurtulush/" target="_blank" class="social-link">
+                    <img src="~/Media/linkedinicon.png" alt="LinkedIn" width="30" height="30" />
+                </a>
+                <a href="https://instagram.com/burak.krtlsh/" target="_blank" class="social-link">
+                    <img src="~/Media/instagicon.png" alt="Instagram" width="30" height="30" />
+                </a>
+            </div>
+        </div>
+    </article>
+
+    <script>
+        const easter = document.querySelector('a[href="#mail"]');
+        const wubwub = () => {
+            audio.currentTime = 0;
+            audio.volume = 0.5;
+            audio.loop = false;
+            audio.play();
+            navigator.vibrate([0, 100, 250, 100, 300]);
+        }
+        easter.addEventListener('mousedown', wubwub);
+        easter.addEventListener('animationend', () => document.activeElement.blur());
+    </script>
+</footer>
+
+
 
 <!-- Bootstrap JS (Optional for functionality like modals, dropdowns, etc.) -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
@@ -318,6 +406,7 @@
 
         if (scrollPosition > 200) {
             document.querySelector('.background2').classList.add('show-background');
+
             document.querySelector('.background3').classList.remove('show-background');
         } else if (scrollPosition > 220) {
             document.querySelector('.background3').classList.add('show-background');

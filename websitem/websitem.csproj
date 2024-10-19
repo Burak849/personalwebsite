@@ -151,6 +151,9 @@
     <Content Include="Media\background2.jpg" />
     <Content Include="Media\csharp-logo-265a149e.svg" />
     <Content Include="Media\file.png" />
+    <Content Include="Media\githubicon.png" />
+    <Content Include="Media\instagicon.png" />
+    <Content Include="Media\linkedinicon.png" />
     <Content Include="Media\mssql-server.png" />
     <Content Include="Media\node.png" />
     <Content Include="Media\pngwing.com.png" />
