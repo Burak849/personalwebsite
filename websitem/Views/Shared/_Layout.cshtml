@@ -14,7 +14,7 @@
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
@@ -31,9 +31,7 @@
             <div style="flex-direction: row-reverse;" class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
                 <ul class="navbar-nav">
                     <li>@Html.ActionLink("About", "About", "Home", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("Professional Skills", "ProfessionalSkills", "Home", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("Social Events", "SocialEvents", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li><a href="#footerSection" class="nav-link">Info</a></li>
                     <li>@Html.ActionLink("References", "References", "Home", new { area = "" }, new { @class = "nav-link" })</li>
                 </ul>
             </div>
@@ -42,28 +40,11 @@
 
 
 
-    <div class="blur-background">
+    <div>
         @RenderBody()
 
 
     </div>
-
-    <div class="altformum">
-        <div class="kullanilan-diller">
-            <p>HTML5</p>
-            <p>CSS3</p>
-            <p>JavaScript</p>
-            <p>ASP.NET</p>
-            <p>React.js</p>
-            <p>UI / UX</p>
-        </div>
-    </div>
-
-
-
-    @*<div style="height: 1500px;">
-            <p>Daha fazla içerik eklemek için bu alanı doldurun.</p>
-        </div>*@
 
 
     @Scripts.Render("~/bundles/jquery")

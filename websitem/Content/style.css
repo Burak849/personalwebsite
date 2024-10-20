@@ -1,15 +1,13 @@
 ﻿@keyframes kaydir {
     0% {
-        transform: translateX(100%); /* Başlangıç noktası (sağdan başla) */
+        transform: translateX(0); /* Başlangıç noktası (sağdan başla) */
     }
 
     100% {
-        transform: translateX(-100%); /* Sola doğru sürekli kayma */
+        transform: translateX(-50%); /* Sola doğru sürekli kayma */
     }
 }
-
 .altformum {
-    margin-top: 23px;
     margin-left: 250px;
     width: 70%;
     background-color: rgba(255, 255, 255, 1);
@@ -26,13 +24,9 @@
     display: flex; /* Elemanları yatay düzenliyoruz */
     animation: kaydir 10s linear infinite; /* Animasyon ayarları */
     white-space: nowrap; /* Satır içi düzenleme ile içeriklerin yan yana durmasını sağlarız */
+    height: 45px;
+    gap: 120px;
 }
-
-    .kullanilan-diller p {
-        margin: 0 20px; /* Diller arasında boşluk bırakıyoruz */
-    }
-
-
 
 
 

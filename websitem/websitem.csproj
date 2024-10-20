@@ -147,16 +147,23 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Media\aspnet.png" />
     <Content Include="Media\B.png" />
     <Content Include="Media\background2.jpg" />
+    <Content Include="Media\bs.png" />
     <Content Include="Media\csharp-logo-265a149e.svg" />
+    <Content Include="Media\css.png" />
     <Content Include="Media\file.png" />
     <Content Include="Media\githubicon.png" />
+    <Content Include="Media\html.png" />
     <Content Include="Media\instagicon.png" />
+    <Content Include="Media\jquery.png" />
+    <Content Include="Media\js.png" />
     <Content Include="Media\linkedinicon.png" />
     <Content Include="Media\mssql-server.png" />
     <Content Include="Media\node.png" />
     <Content Include="Media\pngwing.com.png" />
+    <Content Include="Media\react.png" />
     <Content Include="Media\sql-server-logo-white.png" />
     <Content Include="Media\starry.svg" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -188,10 +195,7 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Home\ProfessionalSkills.cshtml" />
-    <Content Include="Views\Home\SocialEvents.cshtml" />
     <Content Include="Views\Home\References.cshtml" />
   </ItemGroup>
   <ItemGroup>

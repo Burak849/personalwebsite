@@ -1,5 +1,5 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Burak Kurtulush - Personal Website";
 }
 
 <style>
@@ -36,9 +36,9 @@
     .background2 {
         position: relative; /* Pozisyonu relative yap */
         margin-left: -20px;
-        margin-top: 58vh; /* İlk arka planın altında yer alacak şekilde ayarla */
+        margin-top: 28vh; /* İlk arka planın altında yer alacak şekilde ayarla */
         width: 103%;
-        height: 50vh; /* Tüm görünüm yüksekliğini kaplar */
+        height: 45vh; /* Tüm görünüm yüksekliğini kaplar */
         background-color: #000017;
         opacity: 0; /* Başlangıçta görünmez */
         transition: opacity 0.5s; /* Geçiş efekti */
@@ -75,6 +75,7 @@
     }
 
     .blur-background {
+        display:flex;
         height: 330px; /* Yüksekliği tam sayfa yapar */
         background: rgba(255, 255, 255, 0);
         backdrop-filter: blur(10px);
@@ -83,10 +84,15 @@
         border-radius: 15px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0);
         flex-wrap: wrap;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
     }
 
     .background3 {
-        position: fixed;
+        position: relative;
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
@@ -125,6 +131,7 @@
         color: white;
         align-items: center;
     }
+
     .services-container {
         display: flex;
         justify-content: space-between; /* Alanı eşit olarak dağıtır */
@@ -136,13 +143,16 @@
         margin: 0 10px; /* Sağ ve sol kenarlarda boşluk ekler */
         text-align: center; /* Metni ortalar */
     }
-    h4{
-        margin-bottom:10px;
+
+    h4 {
+        margin-bottom: 10px;
     }
+
     .background3 .flex {
         gap: 14rem;
         transition: color 2.5s 0.5s ease-in;
     }
+
     .wrapper {
         max-width: 90rem;
         padding: 0 1.33rem;
@@ -160,13 +170,16 @@
         display: flex;
         flex-wrap: wrap;
     }
+
     .color-light {
         color: #f1faee;
     }
+
     a[class] {
         text-decoration-color: transparent;
         transition: all 0.2s 0s ease-in-out;
     }
+
     .social-media {
         display: flex; /* Flexbox ile öğeleri yan yana yerleştirir */
         justify-content: center; /* Öğeleri yatayda ortalar */
@@ -180,11 +193,10 @@
     .social-link:hover img {
         transform: scale(1.1); /* Hover esnasında ikon boyutunu büyütür */
     }
-
 </style>
 
 
-<div class="background1">
+<div class="blur-background">
     <h1 style="color:white;"><strong>Dynamic web solutions that engage and deliver results.</strong></h1>
     <br />
     <div>
@@ -194,12 +206,90 @@
                     I can put my love of coding to work for you and your business, creating responsive websites, stunning web applications and aesthetic interfaces.
                 </h3>
                 <br />
-                <button type="button" class="btn btn-success btn-outline-primary" style="border:none; margin-left:500px; border-radius:30px; width:200px; font-size:x-large; color:white;">Contact Me</button>
             </div>
         </div>
     </div>
 </div>
 
+<h3 style="color:white; margin-left:250px;">Professionals about Frontend</h3>
+<div class="altformum">
+    <div class="kullanilan-diller">
+        <img src="~/Media/html.png" alt="HTML5" title="HTML5" />
+        <img src="~/Media/css.png" alt="CSS3" title="CSS3" />
+        <img src="~/Media/js.png" alt="JavaScript" title="JavaScript" />
+        <img src="~/Media/bs.png" alt="Bootstrap" title="Bootstrap" />
+        <img src="~/Media/react.png" alt="React.js" title="React.js" />
+        <img src="~/Media/jquery.png" alt="JQuery" title="JQuery" />
+        <img src="~/Media/aspnet.png" alt="ASP.NET" title="ASP.NET" />
+
+        <!-- Surekli bastan basliyor -->
+        <img src="~/Media/html.png" alt="HTML5" title="HTML5" />
+        <img src="~/Media/css.png" alt="CSS3" title="CSS3" />
+        <img src="~/Media/js.png" alt="JavaScript" title="JavaScript" />
+        <img src="~/Media/bs.png" alt="Bootstrap" title="Bootstrap" />
+        <img src="~/Media/react.png" alt="React.js" title="React.js" />
+        <img src="~/Media/jquery.png" alt="JQuery" title="JQuery" />
+        <img src="~/Media/aspnet.png" alt="ASP.NET" title="ASP.NET" />
+    </div>
+</div>
+<br />
+<br />
+<br />
+<br />
+<button type="button"
+        class="btn btn-success btn-outline-primary"
+        style="border:none; margin-left:850px; border-radius:30px; width:200px; font-size:x-large; color:white;"
+        data-bs-target="#contactmodal" data-bs-toggle="modal">
+    Get in Touch
+</button>
+
+<div class="modal fade" id="contactmodal" tabindex="-1" aria-labelledby="contactmodalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="contactmodalLabel">Get in Touch</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Title</option>
+                        <option value="1">Mr.</option>
+                        <option value="2">Mrs.</option>
+                        <option value="3">Ms.</option>
+                        <option value="4">Miss</option>
+                    </select><br />
+
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="inputGroup-sizing-default">Name</span>
+                        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="inputGroup-sizing-default">Surname</span>
+                        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon2">Email</span>
+                        <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    </div>
+                    <div class="mb-3">
+                        <label for="message-text" class="col-form-label">Message:</label>
+                        <textarea class="form-control" id="message-text"></textarea>
+                    </div>
+
+                </form>
+            </div>
+
+
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Send message</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 
@@ -333,7 +423,7 @@
 </div>
 
 <footer role="contentinfo" class="background3">
-    <article class="panel">
+    <article class="panel" id="footerSection">
         <div class="[ wrapper ] [ flex between ]" style="font-size:25px;">
 
             <div class="[ about tagline ]">
@@ -416,15 +506,30 @@
         }
     };
 
-
     const codeSymbol = document.querySelector('.code-symbol');
-    const codeTexts = ['</>', 'CSS', 'SASS', 'JS', 'HTML'];
+    const codeImages = [
+        '~/Media/html.png',
+        '~/Media/css.png',
+        '~/Media/js.png',
+        '~/Media/bs.png',
+        '~/Media/react.png'
+    ];
     let codeIndex = 0;
 
     setInterval(() => {
-        codeSymbol.textContent = codeTexts[codeIndex];
-        codeIndex = (codeIndex + 1) % codeTexts.length;
-    }, 3000); // Her 3 saniyede bir metni değiştirir.
+        codeSymbol.src = codeImages[codeIndex]; // Resmi değiştir
+        codeIndex = (codeIndex + 1) % codeImages.length; // İndeksi güncelle
+    }, 3000); // Her 3 saniyede bir resmi değiştirir.
+
+
+    //const codeSymbol = document.querySelector('.code-symbol');
+    //const codeTexts = ['</>', 'CSS', 'SASS', 'JS', 'HTML'];
+    //let codeIndex = 0;
+
+    //setInterval(() => {
+    //    codeSymbol.textContent = codeTexts[codeIndex];
+    //    codeIndex = (codeIndex + 1) % codeTexts.length;
+    //}, 3000); // Her 3 saniyede bir metni değiştirir.
 
 
 
