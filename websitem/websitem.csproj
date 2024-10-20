@@ -155,6 +155,8 @@
     <Content Include="Media\css.png" />
     <Content Include="Media\file.png" />
     <Content Include="Media\githubicon.png" />
+    <Content Include="Media\gunduz.svg" />
+    <Content Include="Media\hello-ezgif.gif" />
     <Content Include="Media\html.png" />
     <Content Include="Media\instagicon.png" />
     <Content Include="Media\jquery.png" />
