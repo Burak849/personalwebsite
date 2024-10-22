@@ -3,7 +3,7 @@
 }
 
 <style>
-   /* .navbar-nav .nav-link {
+    /* .navbar-nav .nav-link {
         color: white !important;
     }*/
 
@@ -36,7 +36,7 @@
     .background2 {
         position: relative; /* Pozisyonu relative yap */
         margin-left: -20px;
-        margin-top: 28vh; /* İlk arka planın altında yer alacak şekilde ayarla */
+        margin-top: 32vh; /* İlk arka planın altında yer alacak şekilde ayarla */
         width: 103%;
         height: 45vh; /* Tüm görünüm yüksekliğini kaplar */
         background-color: #000017;
@@ -50,7 +50,7 @@
         position: relative;
         margin-left: -20px;
         width: 103%;
-        height: 100vh;
+        height: 95vh;
         background-color: white; /* Beyaz arka plan */
         background-image: none; /* Varsayılan arka planı sıfırlayın */
         opacity: 1; /* Başlangıçta görünmez */
@@ -82,8 +82,7 @@
         -webkit-backdrop-filter: blur(10px);
         padding: 20px;
         border-radius: 15px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0);
-        flex-wrap: wrap;
+        box-shadow: 0px 4px 25px 25px rgba(0, 0, 0, 0);
         flex-wrap: wrap;
         flex-direction: column;
         align-content: center;
@@ -197,13 +196,22 @@
 
 
 <div class="blur-background">
-    <h1 style="color:white;"><strong>Dynamic web solutions that engage and deliver results.</strong></h1>
+    <h1 style="color: white; text-shadow: 0px 0px 14px rgba(168, 218, 220, 0.6666666667);">
+        <span class="glitch-wrapper">
+            <span class="glitch" data-glitch="Dynamic">Dynamic</span>
+        </span><strong>web solutions that engage and deliver results.</strong>
+    </h1>
+
     <br />
     <div>
         <div class="container">
             <div class="container-content">
-                <h3 style="color:white;">
-                    I can put my love of coding to work for you and your business, creating responsive websites, stunning web applications and aesthetic interfaces.
+                <h3 style="color: white; text-shadow: 0px 0px 14px rgba(168, 218, 220, 0.6666666667);">
+                    I can put my
+                    <span class="glitch-wrapper">
+                        <span class="glitch" style="color: rgba(179, 0, 255, 0.99);" data-glitch="love">love</span>
+                    </span>
+                     of coding to work for you and your business, creating responsive websites, stunning web applications and aesthetic interfaces.
                 </h3>
                 <br />
             </div>
@@ -211,7 +219,7 @@
     </div>
 </div>
 
-<h3 style="color:white; margin-left:250px;">Languages I Can Use</h3>
+<h3 style="color:white; margin-left:250px;"></h3>
 <div class="altformum">
     <div class="kullanilan-diller">
         <img src="~/Media/html.png" alt="HTML5" title="HTML5" />
@@ -237,8 +245,8 @@
 <br />
 <br />
 <button type="button"
-        class="btn btn-success btn-outline-primary"
-        style="border:none; margin-left:850px; border-radius:30px; width:200px; font-size:x-large; color:white;"
+        class="btn"
+        style="border: none; margin-left: 850px; border-radius: 30px; width: 200px; font-size: x-large; background-color: #ff5a5f; color: white; "
         data-bs-target="#contactmodal" data-bs-toggle="modal">
     Get in Touch
 </button>
@@ -284,7 +292,7 @@
                     </div>
 
                     <!-- İletişim Yöntemi -->
-                    <div class="mb-3" >
+                    <div class="mb-3">
                         <label for="contact-method" class="form-label">Preferred Communication Method</label>
                         <select id="contact-method" class="form-select" style=" width: 35%; ">
                             <option selected></option>
@@ -346,21 +354,25 @@
 
 
 
-<div class="background2a">
+<div class="background2a" style="padding: 15px;background: #d4f4fd;background: -webkit-linear-gradient(0deg, #d4f4fd 0%, #baeffa 50%, #e1f7fb 100%);background: linear-gradient(0deg, #d4f4fd 0%, #baeffa 50%, #e1f7fb 100%);">
 
-    <article class="[ bg-light ] [ panel ] [ services ]" id="main-content">
+    <article id="main-content">
         <div class="wrapper flow">
 
             <h2 class="headline flow-space-600">Bringing <span class="func"><b class="weight-bold color-secondary">functionality</b></span> <br />to your<b class="dimmed"> Web </b>specifications.</h2>
 
             <p>
-                Do you have an impressive website concept, but it still feels more like a sketch than a fully developed platform? <br />
-                Perhaps you're looking to establish an online presence for your business or launch an e-commerce site but aren’t sure how to proceed.
+                <b>
+                    Do you have an impressive website concept, but it still feels more like a sketch than a fully developed platform? <br />
+                    Perhaps you're looking to establish an online presence for your business or launch an e-commerce site but aren’t sure how to proceed.
+            </b>
             </p>
             <p>
-                Win over your customers and investors with an engaging online experience that not only meets but exceeds their expectations.
+                <b>
+                 Win over your customers and investors with an engaging online experience that not only meets but exceeds their expectations.
+                </b>
             </p>
-            <p>I’m here to help you bring that vision to life.</p>
+            <p><b>I’m here to help you bring that vision to life.</b></p>
 
             <div class="key-facts flow-space-major">
 
@@ -397,16 +409,9 @@
 
 
                     <li class="flow">
-                        <!-- Dynamic -->
-                        <a class="skill-outer dynamic">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160">
-                                <g opacity=".87" fill="none" stroke="#fff">
-                                    <!-- Circle representing dynamic movement -->
-                                    <circle class="dynamic-circle" cx="80" cy="80" r="40" stroke="#fff" stroke-width="5" />
-                                    <!-- Dynamic movement line -->
-                                    <line x1="30" y1="40" x2="130" y2="120" stroke-width="5" stroke="#fff" class="dynamic-line" />
-                                </g>
-                            </svg>
+                        <br />
+                        <a class="shapes">
+                           
                         </a>
                         <h3 style="color:white;" class="flow-space-600 font-sans color-primary-shade">
                             Dynamic
@@ -423,7 +428,6 @@
                                     <path class="graphic-shape2" d="M68.54 60.66h60v60h-60z" />
                                     <path class="graphic-middle" d="M68.54 91h.31a30 30 0 0 0 30-30v-.31H68.54z" />
                                     <path class="graphic-shape1" d="M68.85 31a30 30 0 0 1 30 30 30 30 0 0 1-30 30 30 30 0 0 1-30-30 30 30 0 0 1 30-30z" />
-                                    <circle class="graphic-dot1" cx="" cy="" r="3" fill="#fff" stroke="transparent" />
                                     <circle class="graphic-dot2" cx="" cy="" r="3" fill="#fff" stroke="transparent" />
                                 </g>
                             </svg>
