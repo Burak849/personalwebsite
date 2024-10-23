@@ -1,6 +1,10 @@
 ﻿@{
     ViewBag.Title = "About";
 }
+<head>
+    <link rel="stylesheet" type="text/css" href="~/Content/stiller.css">
+</head>
+
 <style>
     html, body {
         margin: 0;
@@ -12,7 +16,7 @@
         font-family: roboto;
         opacity: 1;
         visibility: visible;
-        transition: background-image 0.5s; 
+        transition: background-image 0.5s;
     }
 
     .kont {
@@ -63,17 +67,21 @@
     .bubble-content {
         text-align: center;
     }
+
     .btn:hover {
         background-color: wheat;
     }
+
     .carousel-item img {
         width: 100%; /* Enini %100 olarak ayarla */
         height: 500px; /* Yüksekliği sabit tut */
         object-fit: contain; /* Resim taşma yapmadan alanı kaplasın */
     }
+
     .modal-backdrop {
         background-color: rgba(0, 0, 0, 0.9); /* Arka planı daha karanlık yap */
     }
+
     .modal-content {
         padding: 0; /* Modal içeriği için padding’i kaldır */
         background-color: transparent; /* Arka planı transparan yap */
@@ -84,6 +92,7 @@
     .modal-body {
         padding: 0; /* Modal body içindeki padding’i de kaldır */
     }
+
     .modal-header {
         padding: 0; /* Başlık kısmındaki boşlukları kaldır */
         border-bottom: none; /* Alt kenarlığı kaldır */
@@ -95,6 +104,7 @@
         border-top: none; /* Üst kenarlığı kaldır */
         background-color: transparent; /* Alt kısmı transparan yap */
     }
+
     .modal-lg {
         max-width: 60%; /* Modalin genişliğini ayarlayabilirsin */
     }
@@ -103,104 +113,152 @@
         margin: 120px auto; /* Modal merkezde kalsın */
         width: 100%; /* Tam genişlikte yap */
     }
-
-
-
+    .popup-image {
+        width: auto;
+        border-radius:40px;
+        height: auto;
+        max-height: 400px; /* İsterseniz fotoğrafların yüksekliğini sabitleyebilirsiniz */
+        object-fit: cover; /* Fotoğrafın alanı en iyi şekilde kaplamasını sağlar */
+    }
+    .p2 {
+        color: white;
+    }
+    
 </style>
+<div class="kont">
+    <div class="gif-container">
+        <img src="~/Media/hello-ezgif.gif" alt="Hellogif" style="background-repeat:no-repeat; width: 110%; height: auto;" />
 
-        <div class="kont">
-            <div class="gif-container">
-                <img src="~/Media/hello-ezgif.gif" alt="Hellogif" style="background-repeat:no-repeat; width: 110%; height: auto;" />
-                
-                <div class="thought-bubble">
-                    <div class="bubble-content">
-                        <h4>Hello! It’s Burak!</h4>
-                        <p>
-                            Thanks for visiting my website! I hope you like the visitor interface. You will find my hobbies and activities in this "About Me" part, which will serve to give a better insight into who I am. To get to know me, click on the story button aside! I am looking forward to meeting you, see you soon!
-                        </p>
-                        <button class="btn btn-outline-light" style="border: none; background-color:transparent; color: black;" data-bs-toggle="modal" data-bs-target="#carouselModal"><b>My Story</b></button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-
-        <!-- Modal -->
-        <div class="modal fade" id="carouselModal" tabindex="-1" aria-labelledby="carouselModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg">
-                <!-- modal-lg: Daha büyük modal için -->
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="carouselModalLabel" style="color:white;">My Story</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <!-- Carousel'i buraya ekliyoruz -->
-                        <div id="carouselExampleCaptions" class="carousel slide">
-                            <div class="carousel-indicators">
-                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
-                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5" aria-label="Slide 6"></button>
-                            </div>
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="~/Media/Storyfold/2.jpg" class="d-block w-100" alt="kidy">
-                                    <div class="carousel-caption d-none d-md-block">
-                                        <h5>First slide label</h5>
-                                        <p>I was born on 1st of February in 2000.</p>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="~/Media/Storyfold/1.jpg" class="d-block w-100" alt="kidy2">
-                                    <div class="carousel-caption d-none d-md-block">
-                                        <h5>Second slide label</h5>
-                                        <p>I have really long friendship like 20years.</p>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="~/Media/Storyfold/3.jpg" class="d-block w-100" alt="usa">
-                                    <div class="carousel-caption d-none d-md-block">
-                                        <h5>Third slide label</h5>
-                                        <p>I applied for Summer Work and Travel program and had really good friendships.</p>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="..." class="d-block w-100" alt="...">
-                                    <div class="carousel-caption d-none d-md-block">
-                                        <h5>Forth slide label</h5>
-                                        <p>Some representative placeholder content for the forth slide.</p>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="..." class="d-block w-100" alt="...">
-                                    <div class="carousel-caption d-none d-md-block">
-                                        <h5>Fifth slide label</h5>
-                                        <p>Some representative placeholder content for the third slide.</p>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="..." class="d-block w-100" alt="...">
-                                    <div class="carousel-caption d-none d-md-block">
-                                        <h5>Sixth slide label</h5>
-                                        <p>Some representative placeholder content for the third slide.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
+        <div class="thought-bubble">
+            <div class="bubble-content">
+                <h4>Hello! It’s Burak!</h4>
+                <p>
+                    Thanks for visiting my website! I hope you like the visitor interface. You will find my hobbies and activities in this "About Me" part, which will serve to give a better insight into who I am. To get to know me, click on the story button aside! I am looking forward to meeting you, see you soon!
+                </p>
+                <a class="btn btn-outline-light" style="border: none; background-color:transparent; color: black;" href="#popup"><b>My Story</b></a>
             </div>
         </div>
     </div>
+</div>
+
+<div class="popup" id="popup">
+    <div class="popup-inner">
+        <div class="popup__content">
+            <div class="page active" id="page-1">
+                <img src="~/Media/Storyfold/2.jpg" alt="Page1" class="popup-image" />
+                <img src="~/Media/Storyfold/1.jpg" alt="Page1" class="popup-image" />
+                <p class="p2">I was born on 1st of February in 2000. I had such an energic and social personality as a kid which is makes really big benefits late in my life. </p>
+            </div>
+            <div class="page" id="page-2">
+                <img src="~/Media/Storyfold/1.jpg" alt="Page2" class="popup-image" />
+                <p class="p2">I have really long friendship like 20 years. This picture is one of my friends who one of the closest ones. On these days I have met with coding from my another friend and This set me in the line for the motivation on these days.</p>
+            </div>
+            <div class="page" id="page-3">
+                <img src="~/Media/Storyfold/4.jpg" alt="Page1" class="popup-image" />
+                <p class="p2">I was born on 1st of February in 2000. I had such an energic and social personality as a kid which is makes really big benefits late in my life. </p>
+            </div>
+            <div class="page" id="page-4">
+                
+                <img src="~/Media/Storyfold/5.jpg" alt="Page1" class="popup-image" />
+                <p class="p2">I was born on 1st of February in 2000. I had such an energic and social personality as a kid which is makes really big benefits late in my life. </pclass="p2">
+            </div>
+            <div class="page" id="page-5">
+                
+                <img src="~/Media/Storyfold/6.jpg" alt="Page1" class="popup-image" />
+                <p class="p2">I was born on 1st of February in 2000. I had such an energic and social personality as a kid which is makes really big benefits late in my life. </p>
+            </div>
+            <div class="page" id="page-6">
+                
+                <img src="~/Media/Storyfold/7.jpg" alt="Page1" class="popup-image" />
+                <p class="p2">I was born on 1st of February in 2000. I had such an energic and social personality as a kid which is makes really big benefits late in my life. </p>
+            </div>
+            <div class="page" id="page-7">
+                
+                <img src="~/Media/Storyfold/9.jpg" alt="Page1" class="popup-image" />
+                <p class="p2">I was born on 1st of February in 2000. I had such an energic and social personality as a kid which is makes really big benefits late in my life. </p>
+            </div>
+
+            <div class="page" id="page-8">
+                
+                <img src="~/Media/Storyfold/10.jpg" alt="Page1" class="popup-image" />
+                <p class="p2">I was born on 1st of February in 2000. I had such an energic and social personality as a kid which is makes really big benefits late in my life. </p>
+            </div>
+            <div class="page" id="page-9">
+                
+                <img src="~/Media/Storyfold/11.jpg" alt="Page1" class="popup-image" />
+                <p class="p2">I was born on 1st of February in 2000. I had such an energic and social personality as a kid which is makes really big benefits late in my life. </p>
+            </div>
+            <div class="page" id="page-10">
+                
+                <img src="~/Media/Storyfold/12.jpg" alt="Page1" class="popup-image" />
+                <p class="p2">I was born on 1st of February in 2000. I had such an energic and social personality as a kid which is makes really big benefits late in my life. </p>
+            </div>
+            <div class="page" id="page-11">
+                
+                <img src="~/Media/Storyfold/14.jpg" alt="Page1" class="popup-image" />
+                <p class="p2">I was born on 1st of February in 2000. I had such an energic and social personality as a kid which is makes really big benefits late in my life. </p>
+            </div>
+            <div class="page" id="page-12">
+                
+                <img src="~/Media/Storyfold/15.jpg" alt="Page1" class="popup-image" />
+                <p class="p2">I was born on 1st of February in 2000. I had such an energic and social personality as a kid which is makes really big benefits late in my life. </p>
+            </div>
+
+            <div class="page" id="page-13">
+               
+                <img src="~/Media/Storyfold/16.jpg" alt="Page1" class="popup-image" />
+                <p class="p2">I was born on 1st of February in 2000. I had such an energic and social personality as a kid which is makes really big benefits late in my life. </p>
+            </div>
+            <div class="page" id="page-14">
+                
+                <img src="~/Media/Storyfold/17.jpg" alt="Page1" class="popup-image" />
+                <p class="p2">I was born on 1st of February in 2000. I had such an energic and social personality as a kid which is makes really big benefits late in my life. </p>
+            </div>
+            <div class="page" id="page-15">
+                
+                <img src="~/Media/Storyfold/19.jpg" alt="Page1" class="popup-image" />
+                <p class="p2">I was born on 1st of February in 2000. I had such an energic and social personality as a kid which is makes really big benefits late in my life. </p>
+            </div>
+
+            <div class="prev" onclick="prevPage()">&#8249;</div>
+            <div class="next" onclick="nextPage()">&#8250;</div>
+        </div>
+        <a class="popup__close" href="#">X</a>
+    </div>
+</div>
+
+
+<script>
+
+    function closePopup() {
+        document.getElementById('popup').style.display = 'none';
+    }
+
+
+    let currentPage = 1; 
+    function showPage(page) {
+        let pages = document.querySelectorAll('.page');
+        pages.forEach(function (p) {
+            p.classList.remove('active');
+        });
+        document.getElementById('page-' + page).classList.add('active');
+    }
+
+    function nextPage() {
+        let pages = document.querySelectorAll('.page').length;
+        currentPage = (currentPage % pages) + 1; // Son sayfaya geldiğinde başa dön
+        showPage(currentPage);
+    }
+
+    function prevPage() {
+        let pages = document.querySelectorAll('.page').length;
+        currentPage = (currentPage - 1) || pages; // İlk sayfadayken son sayfaya dön
+        showPage(currentPage);
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        showPage(currentPage);
+    });
+
+</script>
+
