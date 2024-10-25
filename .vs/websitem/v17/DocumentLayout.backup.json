@@ -3,20 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\burak\\OneDrive\\Masa\u00FCst\u00FC\\websitem\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{C42DB518-8732-489D-8FB4-6384E780E9BC}|websitem\\websitem.csproj|c:\\users\\burak\\onedrive\\masa\u00FCst\u00FC\\websitem\\websitem\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C42DB518-8732-489D-8FB4-6384E780E9BC}|websitem\\websitem.csproj|solutionrelative:websitem\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C42DB518-8732-489D-8FB4-6384E780E9BC}|websitem\\websitem.csproj|c:\\users\\burak\\onedrive\\masa\u00FCst\u00FC\\websitem\\websitem\\views\\home\\skills.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{C42DB518-8732-489D-8FB4-6384E780E9BC}|websitem\\websitem.csproj|solutionrelative:websitem\\views\\home\\skills.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C42DB518-8732-489D-8FB4-6384E780E9BC}|websitem\\websitem.csproj|c:\\users\\burak\\onedrive\\masa\u00FCst\u00FC\\websitem\\websitem\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C42DB518-8732-489D-8FB4-6384E780E9BC}|websitem\\websitem.csproj|solutionrelative:websitem\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C42DB518-8732-489D-8FB4-6384E780E9BC}|websitem\\websitem.csproj|c:\\users\\burak\\onedrive\\masa\u00FCst\u00FC\\websitem\\websitem\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C42DB518-8732-489D-8FB4-6384E780E9BC}|websitem\\websitem.csproj|solutionrelative:websitem\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C42DB518-8732-489D-8FB4-6384E780E9BC}|websitem\\websitem.csproj|c:\\users\\burak\\onedrive\\masa\u00FCst\u00FC\\websitem\\websitem\\views\\home\\about.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C42DB518-8732-489D-8FB4-6384E780E9BC}|websitem\\websitem.csproj|solutionrelative:websitem\\views\\home\\about.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{C42DB518-8732-489D-8FB4-6384E780E9BC}|websitem\\websitem.csproj|c:\\users\\burak\\onedrive\\masa\u00FCst\u00FC\\websitem\\websitem\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C42DB518-8732-489D-8FB4-6384E780E9BC}|websitem\\websitem.csproj|solutionrelative:websitem\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,58 +22,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Error.cshtml",
-              "DocumentMoniker": "C:\\Users\\burak\\OneDrive\\Masa\u00FCst\u00FC\\websitem\\websitem\\Views\\Shared\\Error.cshtml",
-              "RelativeDocumentMoniker": "websitem\\Views\\Shared\\Error.cshtml",
-              "ToolTip": "C:\\Users\\burak\\OneDrive\\Masa\u00FCst\u00FC\\websitem\\websitem\\Views\\Shared\\Error.cshtml",
-              "RelativeToolTip": "websitem\\Views\\Shared\\Error.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-25T00:09:12.525Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\burak\\OneDrive\\Masa\u00FCst\u00FC\\websitem\\websitem\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "websitem\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\burak\\OneDrive\\Masa\u00FCst\u00FC\\websitem\\websitem\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "websitem\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAABwAAABJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-25T00:09:09.711Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\burak\\OneDrive\\Masa\u00FCst\u00FC\\websitem\\websitem\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "websitem\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\burak\\OneDrive\\Masa\u00FCst\u00FC\\websitem\\websitem\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "websitem\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAL0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-25T22:50:12.795Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Skills.cshtml",
               "DocumentMoniker": "C:\\Users\\burak\\OneDrive\\Masa\u00FCst\u00FC\\websitem\\websitem\\Views\\Home\\Skills.cshtml",
               "RelativeDocumentMoniker": "websitem\\Views\\Home\\Skills.cshtml",
               "ToolTip": "C:\\Users\\burak\\OneDrive\\Masa\u00FCst\u00FC\\websitem\\websitem\\Views\\Home\\Skills.cshtml",
               "RelativeToolTip": "websitem\\Views\\Home\\Skills.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAOYBAAAAAAAAAAAAABMAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-25T00:08:54.473Z",
+              "WhenOpened": "2024-10-25T22:49:46.953Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "About.cshtml",
-              "DocumentMoniker": "C:\\Users\\burak\\OneDrive\\Masa\u00FCst\u00FC\\websitem\\websitem\\Views\\Home\\About.cshtml",
-              "RelativeDocumentMoniker": "websitem\\Views\\Home\\About.cshtml",
-              "ToolTip": "C:\\Users\\burak\\OneDrive\\Masa\u00FCst\u00FC\\websitem\\websitem\\Views\\Home\\About.cshtml",
-              "RelativeToolTip": "websitem\\Views\\Home\\About.cshtml",
-              "ViewState": "AgIAAB0BAAAAAAAAAAAAAAoAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-25T00:08:43.132Z",
+              "DocumentIndex": 2,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\burak\\OneDrive\\Masa\u00FCst\u00FC\\websitem\\websitem\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "websitem\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\burak\\OneDrive\\Masa\u00FCst\u00FC\\websitem\\websitem\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "websitem\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-25T21:27:44.785Z",
               "EditorCaption": ""
             }
           ]

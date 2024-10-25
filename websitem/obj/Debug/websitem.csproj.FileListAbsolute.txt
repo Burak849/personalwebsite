@@ -77,3 +77,7 @@ C:\Users\burak\OneDrive\Masaüstü\websitem\websitem\obj\Debug\websitem.csproj.C
 C:\Users\burak\OneDrive\Masaüstü\websitem\websitem\obj\Debug\websitem.csproj.Up2Date
 C:\Users\burak\OneDrive\Masaüstü\websitem\websitem\obj\Debug\websitem.dll
 C:\Users\burak\OneDrive\Masaüstü\websitem\websitem\obj\Debug\websitem.pdb
+C:\Users\burak\OneDrive\Masaüstü\websitem\websitem\bin\EntityFramework.dll
+C:\Users\burak\OneDrive\Masaüstü\websitem\websitem\bin\EntityFramework.SqlServer.dll
+C:\Users\burak\OneDrive\Masaüstü\websitem\websitem\bin\EntityFramework.xml
+C:\Users\burak\OneDrive\Masaüstü\websitem\websitem\bin\EntityFramework.SqlServer.xml

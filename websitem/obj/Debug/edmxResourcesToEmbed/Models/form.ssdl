@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="websitemModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'websitem.dbo.contact_tablo' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="contact_tablo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="title" Type="varchar" MaxLength="50" />
+    <Property Name="name" Type="varchar" MaxLength="50" />
+    <Property Name="surname" Type="varchar" MaxLength="50" />
+    <Property Name="email" Type="varchar" MaxLength="50" />
+    <Property Name="phone" Type="varchar" MaxLength="11" />
+    <Property Name="contactmethod" Type="bit" />
+    <Property Name="message" Type="varchar" MaxLength="500" />
+    <Property Name="date" Type="datetime2" Precision="7" />
+  </EntityType>
+  <EntityContainer Name="websitemModelStoreContainer">
+    <EntitySet Name="contact_tablo" EntityType="Self.contact_tablo" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [contact_tablo].[id] AS [id], 
+    [contact_tablo].[title] AS [title], 
+    [contact_tablo].[name] AS [name], 
+    [contact_tablo].[surname] AS [surname], 
+    [contact_tablo].[email] AS [email], 
+    [contact_tablo].[phone] AS [phone], 
+    [contact_tablo].[contactmethod] AS [contactmethod], 
+    [contact_tablo].[message] AS [message], 
+    [contact_tablo].[date] AS [date]
+    FROM [dbo].[contact_tablo] AS [contact_tablo]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

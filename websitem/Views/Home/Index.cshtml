@@ -191,6 +191,10 @@
     .social-link:hover img {
         transform: scale(1.1); 
     }
+    .scale:hover {
+        scale: 1.1;
+        transition: var(--transition);
+    }
 </style>
 
 
@@ -244,8 +248,8 @@
 <br />
 <div style="width:100%; height:auto; display:flex; justify-content:center;">
     <button type="button"
-            class="btn"
-            style="border: none; border-radius: 30px; width: 200px; font-size: x-large; background-color: #ff5a5f; color: white; "
+            class="btn scale"
+            style="transition: var(--transition); cursor: pointer; border: none; border-radius: 30px; width: 200px; font-size: x-large; background-color: #ff5a5f; color: white; "
             data-bs-target="#contactmodal" data-bs-toggle="modal">
         Get in Touch
     </button>
@@ -258,7 +262,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form>
+                <form id="contactForm">
                     <!-- Unvan -->
                     <div class="mb-3" style=" width: 20%; ">
                         <label for="title-select" class="form-label">Title</label>
@@ -284,7 +288,8 @@
                     <!-- Telefon ve E-posta -->
                     <div class="row mb-3">
                         <div class="col">
-                            <input type="email" class="form-control" id="email-input" placeholder="Email" required>
+                            <input type="email" class="form-control" id="email-input" placeholder="Email"/>
+                            
                         </div>
                         <div class="col">
                             <input type="tel" class="form-control" id="phone-input" placeholder="Phone Number" pattern="[0-9]{10}">
@@ -296,8 +301,8 @@
                         <label for="contact-method" class="form-label">Preferred Communication Method</label>
                         <select id="contact-method" class="form-select" style=" width: 35%; ">
                             <option selected></option>
-                            <option value="email">Email</option>
-                            <option value="phone">Phone Number</option>
+                            <option value="0">Email</option>
+                            <option value="1">Phone Number</option>
                         </select>
                     </div>
 
@@ -310,7 +315,7 @@
 
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-primary">Send Message</button>
+                <button type="submit" class="btn btn-primary" id="submitContactForm">Send Message</button>
             </div>
         </div>
     </div>
@@ -323,25 +328,25 @@
             <div class="card" style="width: 18rem;">
                 <img src="~/Media/csharp-logo-265a149e.svg" class="card-img-top" alt="csharp">
                 <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <p class="card-text">A brief demonstration code snippet to illustrate the functionality of the class and serve as the core of the application’s logic.</p>
                 </div>
             </div>
             <div class="card" style="width: 18rem;">
                 <img src="~/Media/pngwing.com.png" class="card-img-top" alt="mongodb">
                 <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <p class="card-text">Sample data entries to showcase the schema design and represent the majority of the database's records.</p>
                 </div>
             </div>
             <div class="card" style="width: 18rem;">
                 <img src="~/Media/sql-server-logo-white.png" class="card-img-top" alt="mssql">
                 <div class="card-body">
-                    <p class="card-text" style="margin-top:20px;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <p class="card-text" style="margin-top:20px;">An example SQL query to highlight the table structure and form the foundation of the database operations.</p>
                 </div>
             </div>
             <div class="card" style="width: 18rem;">
                 <img src="~/Media/node.png" class="card-img-top" alt="node">
                 <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <p class="card-text">A concise example script to demonstrate the server setup and constitute the main part of the application’s backend.</p>
                 </div>
             </div>
         </div>
@@ -399,7 +404,7 @@
                         </a>
                         <h3 style="color:white;" class="flow-space-600 font-sans color-primary-shade">Interactive</h3>
                         <p style="color:white;" class="flow-space-600 color-dark-glare">
-                            User flow diagrams, concept sketches, wireframes, high-fidelity mockups and full app UI designs.
+                            Engaging example content designed to illustrate user interaction and form the heart of the interactive experience.
                         </p>
                     </li>
 
@@ -412,7 +417,7 @@
                         <h3 style="color:white;" class="flow-space-600 font-sans color-primary-shade">
                             Dynamic
                         </h3>
-                        <p style="color:white;" class="flow-space-600 color-dark-glare">Corporate sites, webshops and more. Need it built in Wordpress, React, Svelte, Jekyll, 11ty or plain ol' HTML? I gotchu.</p>
+                        <p style="color:white;" class="flow-space-600 color-dark-glare">A brief showcase of code that highlights real-time updates and serves as the foundation for the dynamic functionality.</p>
 
                     </li>
 
@@ -431,7 +436,7 @@
                         <h3 class="flow-space-600 font-sans color-primary-shade" style="color:white;">
                             Aesthetic
                         </h3>
-                        <p class="flow-space-600 color-dark-glare" style="color:white;">Quizzes, e-learning, kiosk apps, web games and what-have-you. I'll gladly think along with you.</p>
+                        <p class="flow-space-600 color-dark-glare" style="color:white;">An inspiring visual example to demonstrate design principles and create the essence of the aesthetic appeal.</p>
                     </li>
 
                 </ol>
@@ -508,6 +513,7 @@
 
 
 <script>
+   
     window.onscroll = function () {
         const scrollPosition = document.body.scrollTop || document.documentElement.scrollTop;
 
@@ -523,18 +529,11 @@
         }
     };
 
-    const codeSymbol = document.querySelector('.code-symbol');
-    const codeImages = [
-        '~/Media/html.png',
-        '~/Media/css.png',
-        '~/Media/js.png',
-        '~/Media/bs.png',
-        '~/Media/react.png'
-    ];
+
     let codeIndex = 0;
 
     setInterval(() => {
-        codeSymbol.src = codeImages[codeIndex]; 
+        codeSymbol.src = codeImages[codeIndex];
         codeIndex = (codeIndex + 1) % codeImages.length;
     }, 3000); // Her 3 saniyede bir resmi değiştirir.
 

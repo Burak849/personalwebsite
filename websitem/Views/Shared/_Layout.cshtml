@@ -6,6 +6,10 @@
         font-family:Arial,sans-serif;
         
     }
+    .scale:hover {
+        scale: 1.1;
+        transition: var(--transition);
+    }
 </style>
 
 <!DOCTYPE html>
@@ -31,9 +35,9 @@
             </button>
             <div style="flex-direction: row-reverse;" class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
                 <ul class="navbar-nav">
-                    <li>@Html.ActionLink("About Me", "About", "Home", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("Search in my Brain", "Skills", "Home", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>
+                    <li class="scale">@Html.ActionLink("About Me", "About", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li class="scale">@Html.ActionLink("Search in my Brain", "Skills", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li class="scale">
                         @{
                             var currentPage = ViewContext.RouteData.Values["action"].ToString();
                             var infoLink = currentPage == "About" || currentPage == "Skills" ? Url.Action("Index", "Home") : "#footerSection";
@@ -50,7 +54,6 @@
 
     <div>
         @RenderBody()
-
 
     </div>
 
