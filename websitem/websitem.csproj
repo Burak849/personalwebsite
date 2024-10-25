@@ -154,6 +154,8 @@
     <Content Include="Media\bs.png" />
     <Content Include="Media\csharp-logo-265a149e.svg" />
     <Content Include="Media\css.png" />
+    <Content Include="Media\doktas.png" />
+    <Content Include="Media\eventolog %282%29.png" />
     <Content Include="Media\file.png" />
     <Content Include="Media\githubicon.png" />
     <Content Include="Media\gunduz.svg" />
@@ -163,10 +165,12 @@
     <Content Include="Media\jquery.png" />
     <Content Include="Media\js.png" />
     <Content Include="Media\linkedinicon.png" />
+    <Content Include="Media\logom.png" />
     <Content Include="Media\mssql-server.png" />
     <Content Include="Media\node.png" />
     <Content Include="Media\pngwing.com.png" />
     <Content Include="Media\react.png" />
+    <Content Include="Media\referral.png" />
     <Content Include="Media\sql-server-logo-white.png" />
     <Content Include="Media\starry.svg" />
     <Content Include="Media\Storyfold\1.jpg" />
@@ -214,7 +218,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Home\References.cshtml" />
+    <Content Include="Views\Home\Skills.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

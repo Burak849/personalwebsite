@@ -2,8 +2,9 @@
     .navbar-nav .nav-link {
         color: white !important; 
         font-size:20px;
-        margin-left:24px;
+        margin-left:40px;
         font-family:Arial,sans-serif;
+        
     }
 </style>
 
@@ -19,10 +20,10 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    <nav class="navbar navbar-expand-sm navbar-toggleable-sm" style="background: transparent;">
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm" style="background: transparent; padding: 15px;">
         <div class="container">
             <a class="navbar-brand" href="@Url.Action("Index", "Home")">
-                <img src="~/Media/file.png" alt="Logo" style="height: 90px; width: 90px;" />
+                <img src="~/Media/logom.png" alt="Logo" style="height: 80px; width: 180px;" />
             </a>
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Toggle navigation" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -31,8 +32,15 @@
             <div style="flex-direction: row-reverse;" class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
                 <ul class="navbar-nav">
                     <li>@Html.ActionLink("About Me", "About", "Home", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li><a href="#footerSection" class="nav-link">Info</a></li>
-                    <li>@Html.ActionLink("How much I know", "References", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("Search in my Brain", "Skills", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>
+                        @{
+                            var currentPage = ViewContext.RouteData.Values["action"].ToString();
+                            var infoLink = currentPage == "About" || currentPage == "Skills" ? Url.Action("Index", "Home") : "#footerSection";
+                            var infoText = currentPage == "About" || currentPage == "Skills" ? "Home" : "Info";
+                        }
+                        <a href="@infoLink" class="nav-link">@infoText</a>
+                    </li>
                 </ul>
             </div>
         </div>

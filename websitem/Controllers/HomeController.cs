@@ -20,7 +20,7 @@ namespace websitem.Controllers
             return View();
         }
 
-        public ActionResult References()
+        public ActionResult Skills()
         {
             ViewBag.Message = "Your contact page.";
 

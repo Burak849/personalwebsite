@@ -1,0 +1,525 @@
+﻿@{
+    ViewBag.Title = "Skills";
+}
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+<style>
+    .navbar-expand-sm {
+        z-index:2;
+    }
+
+
+    html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        background: rgb(11,9,32);
+        background: linear-gradient(90deg, rgba(11,9,32,1) 0%, rgba(24,23,50,1) 35%, rgba(28,37,38,1) 100%);
+        font-family: roboto;
+        opacity: 1;
+        visibility: visible;
+        transition: background-image 0.5s;
+        z-index: -1;
+        scrollbar-width: none;
+    }
+
+    .backkonteynir {
+        font-family: roboto;
+        font-style: normal;
+        padding: 10px;
+        z-index:2;
+    }
+
+    .konteynir {
+        display: flex;
+        margin: auto;
+        height: auto;
+        background: transparent;
+        font-family: cursive;
+        font-size: xx-large;
+        opacity: 1;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: flex-start;
+        align-items: center;
+        z-index: 2;
+    }
+    .table-container {
+        max-height: 400px; 
+        width: 45%; 
+        overflow-y: auto; 
+        overflow-x: hidden; 
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 10px;
+        box-shadow: 0 15px 100px rgba(0, 0, 0, 0.9);
+        margin-top: 20px;
+        z-index:2;
+    }
+    .table {
+        border-collapse: collapse;
+        text-align: left;
+   
+    }
+
+        .table th, .table td {
+            text-align: center;
+            padding: 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .table th {
+            /*background-color: rgba(255, 255, 255, 0.9);*/ 
+            background-color:lightslategray;
+        }
+
+    .table-hover tbody tr:hover {
+        background-color: rgba(255, 255, 255, 0.1); 
+    }
+
+    .table-hover tbody tr:nth-child(even) {
+        background-color: rgba(255, 255, 255, 0.3); 
+    }
+
+    input[type="text"] {
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        width: 250px;
+        margin-bottom: 20px;
+        font-size: 16px;
+    }
+    p{
+        color:white;
+    }
+    /* Animasyon arkaplanı için stil */
+    #bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0; 
+    }
+
+        #bg canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.3;
+        }
+    ::-webkit-scrollbar {
+
+        display: none;
+    }
+
+</style>
+
+<div id="bg">
+    <canvas></canvas>
+    <canvas></canvas>
+    <canvas></canvas>
+</div>
+
+<div class="backkonteynir">
+    <div class="konteynir">
+        <div style="color:white;text-align: center; z-index:2;">
+            <h1>Search my brain 🧠</h1>
+            <p>Here are some knowledges about my experiences!</p>
+        </div>
+        <input type="text" id="search" placeholder="🔎 Search" style="z-index: 2;" onkeyup="searchTable()">
+        <div class="table-container">
+            <table class="table table-hover table-striped" id="myTable">
+                <thead>
+                    <tr>
+                        <th scope="col">Language</th>
+                        <th scope="col">Experience</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>HTML5</td>
+                        <td>🔥 Have a lot of experience</td>
+                    </tr>
+                    <tr>
+                        <td>CSS3</td>
+                        <td>🔥 Have a lot of experience</td>
+                    </tr>
+                    <tr>
+                        <td>Tailwind CSS</td>
+                        <td>🔥 Have a lot of experience</td>
+                    </tr>
+                    <tr>
+                        <td>Bootstrap</td>
+                        <td>🔥 Have a lot of experience</td>
+                    </tr>
+                    <tr>
+                        <td>SVG / CANVA</td>
+                        <td>🔥 Have a lot of experience</td>
+                    </tr>
+                    <tr>
+                        <td>JavaScript</td>
+                        <td>🔥 Have a lot of experience</td>
+                    </tr>
+                    <tr>
+                        <td>ASP.NET</td>
+                        <td>🔥 Have a lot of experience</td>
+                    </tr>
+                    <tr>
+                        <td>ASP.NET MVC / Core</td>
+                        <td>🔥 Have a lot of experience</td>
+                    </tr>
+                    <tr>
+                        <td>C#</td>
+                        <td>🔥 Have a lot of experience</td>
+                    </tr>
+                    <tr>
+                        <td>MsSQL</td>
+                        <td>🔥 Have a lot of experience</td>
+                    </tr>
+                    <tr>
+                        <td>React.js</td>
+                        <td>👍 Have a bit of experience</td>
+                    </tr>
+                    <tr>
+                        <td>SCSS</td>
+                        <td>👍 Have a bit of experience</td>
+                    </tr>
+                    <tr>
+                        <td>Figma</td>
+                        <td>👍 Have a bit of experience</td>
+                    </tr>
+                    <tr>
+                        <td>UI / UX</td>
+                        <td>👍 Have a bit of experience</td>
+                    </tr>
+                    <tr>
+                        <td>Canvas</td>
+                        <td>👍 Have a bit of experience</td>
+                    </tr>
+                    <tr>
+                        <td>JQuery</td>
+                        <td>👍 Have a bit of experience</td>
+                    </tr>
+                    <tr>
+                        <td>Ajax</td>
+                        <td>👍 Have a bit of experience</td>
+                    </tr>
+                    <tr>
+                        <td>Python</td>
+                        <td>👍 Have a bit of experience</td>
+                    </tr>
+                    <tr>
+                        <td>MySQL</td>
+                        <td>👍 Have a bit of experience</td>
+                    </tr>
+                    <tr>
+                        <td>PHP</td>
+                        <td>👍 Have a bit of experience</td>
+                    </tr>
+                    <tr>
+                        <td>Microsoft Excel</td>
+                        <td>👍 Have a bit of experience</td>
+                    </tr>
+                    <tr>
+                        <td>Node.js</td>
+                        <td>👍 Have a bit of experience</td>
+                    </tr>
+                    <tr>
+                        <td>Next.js</td>
+                        <td>👍 Have a bit of experience</td>
+                    </tr>
+                    <tr>
+                        <td>NPM, Yarn</td>
+                        <td>👍 Have a bit of experience</td>
+                    </tr>
+                    <tr>
+                        <td>C</td>
+                        <td>👍 Have a bit of experience</td>
+                    </tr>
+                    <tr>
+                        <td>Java</td>
+                        <td>👍 Have a bit of experience</td>
+                    </tr>
+                    <tr>
+                        <td>WordPress</td>
+                        <td>🦾 Passionately learning</td>
+                    </tr>
+                    <tr>
+                        <td>Angular</td>
+                        <td>🦾 Passionately learning</td>
+                    </tr>
+                    <tr>
+                        <td>TypeScript</td>
+                        <td>🦾 Passionately learning</td>
+                    </tr>
+                    <tr>
+                        <td>Scrum</td>
+                        <td>🦾 Passionately learning</td>
+                    </tr>
+                    <tr>
+                        <td>DevOps</td>
+                        <td>🦾 Passionately learning</td>
+                    </tr>
+                    <tr>
+                        <td>Kanban</td>
+                        <td>👨🏻‍🏫 Have read about it</td>
+                    </tr>
+                    <tr>
+                        <td>Azure</td>
+                        <td>👨🏻‍🏫 Have read about it</td>
+                    </tr>
+                    <tr>
+                        <td>Vue.js</td>
+                        <td>👨🏻‍🏫 Have read about it</td>
+                    </tr>
+                    <tr>
+                        <td>Developer Express</td>
+                        <td>👨🏻‍🏫 Have read about it</td>
+                    </tr>
+                    <tr>
+                        <td>PineScript</td>
+                        <td>👂🏻 Have heard about it</td>
+                    </tr>
+                    <tr>
+                        <td>Sharepoint</td>
+                        <td>👂🏻 Have heard about it</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br />
+        <p style="color: white; z-index: 2;">Please beware that this list will always be incomplete and outdated, as I am constantly learning. It is, however, a great way to quickly scan my knowledge and experience.</p>
+    </div>
+</div>
+
+<script>
+    function searchTable() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("search");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+
+        for (i = 1; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0];
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+
+    // Animasyon kodu
+    (function ($) {
+        var canvas = $('#bg').children('canvas'),
+            background = canvas[0],
+            foreground1 = canvas[1],
+            foreground2 = canvas[2],
+            config = {
+                circle: { amount: 18, layer: 3, color: [157, 97, 207], alpha: 0.3 },
+                line: { amount: 12, layer: 3, color: [255, 255, 255], alpha: 0.3 },
+                speed: 0.5,
+                angle: 20
+            };
+
+        if (background.getContext) {
+            var bctx = background.getContext('2d'),
+                fctx1 = foreground1.getContext('2d'),
+                fctx2 = foreground2.getContext('2d'),
+                M = window.Math,
+                degree = config.angle / 360 * M.PI * 2,
+                circles = [], lines = [], wWidth, wHeight, timer;
+
+            requestAnimationFrame = window.requestAnimationFrame || function (callback) { setTimeout(callback, 1000 / 60); };
+            cancelAnimationFrame = window.cancelAnimationFrame || clearTimeout;
+
+            var setCanvasHeight = function () {
+                wWidth = $(window).width();
+                wHeight = $(window).height();
+
+                canvas.each(function () {
+                    this.width = wWidth;
+                    this.height = wHeight;
+                });
+            };
+
+            var drawCircle = function (x, y, radius, color, alpha) {
+                var gradient = fctx1.createRadialGradient(x, y, radius, x, y, 0);
+                gradient.addColorStop(0, 'rgba(' + color[0] + ',' + color[1] + ',' + color[2] + ',' + alpha + ')');
+                gradient.addColorStop(1, 'rgba(' + color[0] + ',' + color[1] + ',' + color[2] + ',' + (alpha - 0.1) + ')');
+
+                fctx1.beginPath();
+                fctx1.arc(x, y, radius, 0, M.PI * 2, true);
+                fctx1.fillStyle = gradient;
+                fctx1.fill();
+            };
+
+            var drawLine = function (x, y, width, color, alpha) {
+                var endX = x + M.sin(degree) * width,
+                    endY = y - M.cos(degree) * width,
+                    gradient = fctx2.createLinearGradient(x, y, endX, endY);
+                gradient.addColorStop(0, 'rgba(' + color[0] + ',' + color[1] + ',' + color[2] + ',' + alpha + ')');
+                gradient.addColorStop(1, 'rgba(' + color[0] + ',' + color[1] + ',' + color[2] + ',' + (alpha - 0.1) + ')');
+
+                fctx2.beginPath();
+                fctx2.moveTo(x, y);
+                fctx2.lineTo(endX, endY);
+                fctx2.lineWidth = 3;
+                fctx2.lineCap = 'round';
+                fctx2.strokeStyle = gradient;
+                fctx2.stroke();
+            };
+
+            var drawBack = function () {
+                bctx.clearRect(0, 0, wWidth, wHeight);
+                var gradient = [];
+
+                gradient[0] = bctx.createRadialGradient(wWidth * 0.3, wHeight * 0.1, 0, wWidth * 0.3, wHeight * 0.1, wWidth * 0.9);
+                gradient[0].addColorStop(0, 'rgb(0, 26, 77)');
+                gradient[0].addColorStop(1, 'transparent');
+
+                bctx.translate(wWidth, 0);
+                bctx.scale(-1, 1);
+                bctx.beginPath();
+                bctx.fillStyle = gradient[0];
+                bctx.fillRect(0, 0, wWidth, wHeight);
+
+                gradient[1] = bctx.createRadialGradient(wWidth * 0.1, wHeight * 0.1, 0, wWidth * 0.3, wHeight * 0.1, wWidth);
+                gradient[1].addColorStop(0, 'rgb(0, 150, 240)');
+                gradient[1].addColorStop(0.8, 'transparent');
+
+                bctx.translate(wWidth, 0);
+                bctx.scale(-1, 1);
+                bctx.beginPath();
+                bctx.fillStyle = gradient[1];
+                bctx.fillRect(0, 0, wWidth, wHeight);
+            };
+
+            var animate = function () {
+                var sin = M.sin(degree),
+                    cos = M.cos(degree);
+
+                if (config.circle.amount > 0 && config.circle.layer > 0) {
+                    fctx1.clearRect(0, 0, wWidth, wHeight);
+                    for (var i = 0, len = circles.length; i < len; i++) {
+                        var item = circles[i],
+                            x = item.x,
+                            y = item.y,
+                            radius = item.radius,
+                            speed = item.speed;
+
+                        if (x > wWidth + radius) {
+                            x = -radius;
+                        } else if (x < -radius) {
+                            x = wWidth + radius
+                        } else {
+                            x += sin * speed;
+                        }
+
+                        if (y > wHeight + radius) {
+                            y = -radius;
+                        } else if (y < -radius) {
+                            y = wHeight + radius;
+                        } else {
+                            y -= cos * speed;
+                        }
+
+                        item.x = x;
+                        item.y = y;
+                        drawCircle(x, y, radius, item.color, item.alpha);
+                    }
+                }
+
+                if (config.line.amount > 0 && config.line.layer > 0) {
+                    fctx2.clearRect(0, 0, wWidth, wHeight);
+                    for (var j = 0, len = lines.length; j < len; j++) {
+                        var item = lines[j],
+                            x = item.x,
+                            y = item.y,
+                            width = item.width,
+                            speed = item.speed;
+
+                        if (x > wWidth + width * sin) {
+                            x = -width * sin;
+                        } else if (x < -width * sin) {
+                            x = wWidth + width * sin;
+                        } else {
+                            x += sin * speed;
+                        }
+
+                        if (y > wHeight + width * cos) {
+                            y = -width * cos;
+                        } else if (y < -width * cos) {
+                            y = wHeight + width * cos;
+                        } else {
+                            y -= cos * speed;
+                        }
+
+                        item.x = x;
+                        item.y = y;
+                        drawLine(x, y, width, item.color, item.alpha);
+                    }
+                }
+
+                timer = requestAnimationFrame(animate);
+            };
+
+            var createItem = function () {
+                circles = [];
+                lines = [];
+
+                if (config.circle.amount > 0 && config.circle.layer > 0) {
+                    for (var i = 0; i < config.circle.amount / config.circle.layer; i++) {
+                        for (var j = 0; j < config.circle.layer; j++) {
+                            circles.push({
+                                x: M.random() * wWidth,
+                                y: M.random() * wHeight,
+                                radius: M.random() * (20 + j * 5) + (20 + j * 5),
+                                color: config.circle.color,
+                                alpha: M.random() * 0.2 + (config.circle.alpha - j * 0.1),
+                                speed: config.speed * (1 + j * 0.5)
+                            });
+                        }
+                    }
+                }
+
+                if (config.line.amount > 0 && config.line.layer > 0) {
+                    for (var m = 0; m < config.line.amount / config.line.layer; m++) {
+                        for (var n = 0; n < config.line.layer; n++) {
+                            lines.push({
+                                x: M.random() * wWidth,
+                                y: M.random() * wHeight,
+                                width: M.random() * (20 + n * 5) + (20 + n * 5),
+                                color: config.line.color,
+                                alpha: M.random() * 0.2 + (config.line.alpha - n * 0.1),
+                                speed: config.speed * (1 + n * 0.5)
+                            });
+                        }
+                    }
+                }
+
+                cancelAnimationFrame(timer);
+                timer = requestAnimationFrame(animate);
+                drawBack();
+            };
+
+            $(document).ready(function () {
+                setCanvasHeight();
+                createItem();
+            });
+            $(window).resize(function () {
+                setCanvasHeight();
+                createItem();
+            });
+        }
+    })(jQuery);
+</script>

@@ -1,10 +1,10 @@
 ﻿@keyframes kaydir {
     0% {
-        transform: translateX(0); /* Başlangıç noktası (sağdan başla) */
+        transform: translateX(0); 
     }
 
     100% {
-        transform: translateX(-50%); /* Sola doğru sürekli kayma */
+        transform: translateX(-50%);
     }
 }
 .altformum {
@@ -16,14 +16,14 @@
     overflow: hidden;
     box-shadow: 0 5px 8px rgba(0, 0, 0, 1);
     padding: 25px;
-    clear: both; /* Yüzen içeriklerden etkilenmemesi için clear ekliyoruz */
-    position: relative; /* Animasyon için konum ayarlaması yapıyoruz */
+    clear: both; 
+    position: relative;
 }
 
 .kullanilan-diller {
-    display: flex; /* Elemanları yatay düzenliyoruz */
-    animation: kaydir 10s linear infinite; /* Animasyon ayarları */
-    white-space: nowrap; /* Satır içi düzenleme ile içeriklerin yan yana durmasını sağlarız */
+    display: flex; 
+    animation: kaydir 10s linear infinite; 
+    white-space: nowrap; 
     height: 45px;
     gap: 120px;
 }
@@ -267,7 +267,7 @@
     }
 }
 
-/* Copy this code after the above code */
+
 @keyframes customAni {
     0% {
         transform: scale(0.5);
@@ -280,9 +280,6 @@
     }
 }
 
-/**
- * Colors
- */
 
 $primary: hsla(120, 74%, 75%, 0.6); //#8eee8e
 $primary-dark: hsla(120, 74%, 75%, 0.3); //#8eee8e
@@ -348,8 +345,8 @@ svg {
 }
 
 .code-symbol {
-    opacity: 0; /* Başlangıçta görünmez */
-    animation: symbol-animation 2s forwards; /* Animasyon ile görünür hale gelecek */
+    opacity: 0; 
+    animation: symbol-animation 2s forwards;
 }
 
 @keyframes symbol-animation {
@@ -362,7 +359,7 @@ svg {
     }
 }
 
-/* Simge animasyonu için içerik değişimi */
+
 @keyframes codeAnimation {
     0% {
         content: "</>";
@@ -389,9 +386,9 @@ svg {
     }
 }
 
-/* Javascript ile içerik değişimi için */
+
 .code-symbol {
-    animation: codeAnimation 3s linear infinite; /* Kod simgesi için animasyon */
+    animation: codeAnimation 3s linear infinite; 
 }
 
 
@@ -674,8 +671,13 @@ to {
 }
 
 .panel {
+    margin:9px;
     padding: 2rem;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display:flex;
+    justify-content:center;
+    gap:14rem;
+    flex-direction:row;
 }
 
 .flow {

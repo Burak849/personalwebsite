@@ -3,21 +3,18 @@
 }
 
 <style>
-    /* .navbar-nav .nav-link {
-        color: white !important;
-    }*/
-
+    
     html, body {
         margin: 0;
         padding: 0;
         height: 100%;
-        background-image: url(/Media/starry.svg); /* İlk arka plan */
+        background-image: url(/Media/starry.svg); 
         background-size: cover;
         background-position: center;
         font-family: Arial, sans-serif;
         opacity: 1;
         visibility: visible;
-        transition: background-image 0.5s; /* Arka plan geçiş efekti */
+        transition: background-image 0.5s;
     }
 
     .background1 {
@@ -25,7 +22,7 @@
         position: relative;
         padding: 40px;
         margin: 0;
-        width: 100%;
+        width: auto;
         flex-direction: column;
         flex-wrap: wrap;
         align-content: center;
@@ -34,26 +31,26 @@
     }
 
     .background2 {
-        position: relative; /* Pozisyonu relative yap */
-        margin-left: -20px;
-        margin-top: 32vh; /* İlk arka planın altında yer alacak şekilde ayarla */
-        width: 103%;
-        height: 45vh; /* Tüm görünüm yüksekliğini kaplar */
+        position: relative; 
+        margin-left: 0px;
+        margin-top: 32vh; 
+        width: auto;
+        height: auto; 
         background-color: #000017;
-        opacity: 0; /* Başlangıçta görünmez */
-        transition: opacity 0.5s; /* Geçiş efekti */
-        z-index: 2; /* Daha düşük z-index */
+        opacity: 0; 
+        transition: opacity 0.5s; 
+        z-index: 2; 
         align-items: center;
     }
 
     .background2a {
         position: relative;
-        margin-left: -20px;
-        width: 103%;
-        height: 95vh;
-        background-color: white; /* Beyaz arka plan */
-        background-image: none; /* Varsayılan arka planı sıfırlayın */
-        opacity: 1; /* Başlangıçta görünmez */
+        margin-left: 0px;
+        width: auto;
+        height: auto;
+        background-color: white; 
+        background-image: none; 
+        opacity: 1; 
         transition: opacity 0.5s;
         color: black;
         z-index: 3;
@@ -76,7 +73,7 @@
 
     .blur-background {
         display: flex;
-        height: 330px; /* Yüksekliği tam sayfa yapar */
+        height: 330px; 
         background: rgba(255, 255, 255, 0);
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
@@ -97,12 +94,12 @@
         flex-wrap: wrap;
         align-content: center;
         justify-content: center;
-        margin-left: -20px;
-        width: 103%;
-        height: 90vh;
-        background-color: black; /* Beyaz arka plan */
-        background-image: none; /* Varsayılan arka planı sıfırlayın */
-        opacity: 1; /* Başlangıçta görünmez */
+        margin-left: 0px;
+        width: auto;
+        height: auto;
+        background-color: black; 
+        background-image: none; 
+        opacity: 1; 
         transition: opacity 0.5s;
         color: white;
         z-index: 4;
@@ -117,15 +114,15 @@
 
     .card-container {
         display: flex;
-        flex-wrap: wrap; /* Kartların sığmadığında alt satıra geçmesini sağlar */
-        gap: 21px; /* Kartlar arasında boşluk bırakır */
+        flex-wrap: wrap;
+        gap: 21px; 
         margin-top: 45px;
         flex-direction: row;
         align-items: center;
     }
 
     .card {
-        flex: 1 1 18rem; /* Kartların sabit genişlikte kalmasını sağlar */
+        flex: 1 1 18rem;
         background: transparent;
         color: white;
         align-items: center;
@@ -133,14 +130,14 @@
 
     .services-container {
         display: flex;
-        justify-content: space-between; /* Alanı eşit olarak dağıtır */
-        margin-top: 20px; /* Üstte biraz boşluk */
+        justify-content: space-between;
+        margin-top: 20px;
     }
 
     .service-item {
-        flex: 1; /* Her bir öğe eşit genişlikte olacak şekilde ayarlanır */
-        margin: 0 10px; /* Sağ ve sol kenarlarda boşluk ekler */
-        text-align: center; /* Metni ortalar */
+        flex: 1; 
+        margin: 0 10px;
+        text-align: center;
     }
 
     h4 {
@@ -148,7 +145,8 @@
     }
 
     .background3 .flex {
-        gap: 14rem;
+        gap: 6rem;
+        justify-content:center;
         transition: color 2.5s 0.5s ease-in;
     }
 
@@ -180,17 +178,18 @@
     }
 
     .social-media {
-        display: flex; /* Flexbox ile öğeleri yan yana yerleştirir */
-        justify-content: center; /* Öğeleri yatayda ortalar */
-        gap: 15px; /* İkonlar arasında boşluk bırakır */
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin: 30px
     }
 
     .social-link img {
-        transition: transform 0.3s; /* Hover efektine geçiş */
+        transition: transform 0.3s;
     }
 
     .social-link:hover img {
-        transform: scale(1.1); /* Hover esnasında ikon boyutunu büyütür */
+        transform: scale(1.1); 
     }
 </style>
 
@@ -219,7 +218,6 @@
     </div>
 </div>
 
-<h3 style="color:white; margin-left:250px;"></h3>
 <div class="altformum">
     <div class="kullanilan-diller">
         <img src="~/Media/html.png" alt="HTML5" title="HTML5" />
@@ -244,12 +242,14 @@
 <br />
 <br />
 <br />
-<button type="button"
-        class="btn"
-        style="border: none; margin-left: 850px; border-radius: 30px; width: 200px; font-size: x-large; background-color: #ff5a5f; color: white; "
-        data-bs-target="#contactmodal" data-bs-toggle="modal">
-    Get in Touch
-</button>
+<div style="width:100%; height:auto; display:flex; justify-content:center;">
+    <button type="button"
+            class="btn"
+            style="border: none; border-radius: 30px; width: 200px; font-size: x-large; background-color: #ff5a5f; color: white; "
+            data-bs-target="#contactmodal" data-bs-toggle="modal">
+        Get in Touch
+    </button>
+</div>
 <div class="modal fade" id="contactmodal" tabindex="-1" aria-labelledby="contactmodalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -271,7 +271,7 @@
                         </select>
                     </div>
 
-                    <!-- Ad Soyad Yan Yana -->
+                    <!-- Ad Soyad  -->
                     <div class="row mb-3">
                         <div class="col">
                             <input type="text" class="form-control" id="name-input" placeholder="Name" required>
@@ -281,7 +281,7 @@
                         </div>
                     </div>
 
-                    <!-- Telefon ve E-posta Yan Yana -->
+                    <!-- Telefon ve E-posta -->
                     <div class="row mb-3">
                         <div class="col">
                             <input type="email" class="form-control" id="email-input" placeholder="Email" required>
@@ -316,10 +316,6 @@
     </div>
 </div>
 
-
-
-
-<!-- background2 ve background3 için boş div oluştur -->
 <div class="background2">
     <div class="o-page">
 
@@ -445,8 +441,8 @@
 </div>
 
 <footer role="contentinfo" class="background3">
+        <div class="[ wrapper ] [ flex between ]" style="font-size:24px;">
     <article class="panel" id="footerSection">
-        <div class="[ wrapper ] [ flex between ]" style="font-size:25px;">
 
             <div class="[ about tagline ]">
                 <h3 class="text-start">
@@ -476,6 +472,7 @@
                 <a href="tel:+905386447092" class="color-light">+90 538 644 7092</a>
             </address>
 
+    </article>
             <div class="social-media text-center gap-top-600">
                 <h5>Social Media:</h5>
                 <a href="https://github.com/Burak849" target="_blank" class="social-link">
@@ -489,7 +486,6 @@
                 </a>
             </div>
         </div>
-    </article>
 
     <script>
         const easter = document.querySelector('a[href="#mail"]');
@@ -507,7 +503,6 @@
 
 
 
-<!-- Bootstrap JS (Optional for functionality like modals, dropdowns, etc.) -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
 
@@ -539,20 +534,8 @@
     let codeIndex = 0;
 
     setInterval(() => {
-        codeSymbol.src = codeImages[codeIndex]; // Resmi değiştir
-        codeIndex = (codeIndex + 1) % codeImages.length; // İndeksi güncelle
+        codeSymbol.src = codeImages[codeIndex]; 
+        codeIndex = (codeIndex + 1) % codeImages.length;
     }, 3000); // Her 3 saniyede bir resmi değiştirir.
-
-
-    //const codeSymbol = document.querySelector('.code-symbol');
-    //const codeTexts = ['</>', 'CSS', 'SASS', 'JS', 'HTML'];
-    //let codeIndex = 0;
-
-    //setInterval(() => {
-    //    codeSymbol.textContent = codeTexts[codeIndex];
-    //    codeIndex = (codeIndex + 1) % codeTexts.length;
-    //}, 3000); // Her 3 saniyede bir metni değiştirir.
-
-
 
 </script>

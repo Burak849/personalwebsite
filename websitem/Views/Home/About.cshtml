@@ -10,7 +10,7 @@
         margin: 0;
         padding: 0;
         height: 100%;
-        background-image: url(/Media/gunduz.svg); /* İlk arka plan */
+        background-image: url(/Media/gunduz.svg);
         background-size: cover;
         background-position: center;
         font-family: roboto;
@@ -24,7 +24,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        height: 87vh; /* Tüm yüksekliği kaplaması için */
+        height: 21.5vh; 
         align-items: baseline;
         justify-content: flex-end;
     }
@@ -39,15 +39,14 @@
     /* Düşünce balonu stili */
     .thought-bubble {
         position: absolute;
-        top: 47%; /* Balonun konumu */
+        top: 47%; 
         left: 13%;
         transform: translateX(-50%);
         background-color: white;
-        /*border: 2px solid #ccc;*/
         border-radius: 10px;
         padding: 10px;
-        /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);*/
-        width: 500px; /* Balonun genişliği */
+       /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);*/
+        width: 500px; 
         height: auto;
         background-color: wheat;
         animation: customAni 2s ease 0s 1 normal both;
@@ -56,12 +55,12 @@
         .thought-bubble::after {
             content: '';
             position: absolute;
-            bottom: 0%; /* Balonun alt kısmı */
-            left: -3%;
-            margin-left: -16px; /* Açıyla konumlandırma */
+            bottom: 0%;
+            left: -2%;
+            margin-left: -16px;
             border-width: 30px;
             border-style: solid;
-            border-color: transparent transparent wheat transparent; /* Üstteki üçgen şekli için */
+            border-color: transparent transparent wheat transparent;
         }
 
     .bubble-content {
@@ -73,58 +72,104 @@
     }
 
     .carousel-item img {
-        width: 100%; /* Enini %100 olarak ayarla */
-        height: 500px; /* Yüksekliği sabit tut */
-        object-fit: contain; /* Resim taşma yapmadan alanı kaplasın */
+        width: 100%; 
+        height: 500px; 
+        object-fit: contain; 
     }
 
     .modal-backdrop {
-        background-color: rgba(0, 0, 0, 0.9); /* Arka planı daha karanlık yap */
+        background-color: rgba(0, 0, 0, 0.9); 
     }
 
     .modal-content {
-        padding: 0; /* Modal içeriği için padding’i kaldır */
-        background-color: transparent; /* Arka planı transparan yap */
-        border: none; /* Modal kenarlıklarını kaldır */
-        box-shadow: none; /* Gölgeyi de kaldırarak tamamen saydam hale getir */
+        padding: 0; 
+        background-color: transparent; 
+        border: none; 
+        box-shadow: none; 
     }
 
     .modal-body {
-        padding: 0; /* Modal body içindeki padding’i de kaldır */
+        padding: 0; 
     }
 
     .modal-header {
-        padding: 0; /* Başlık kısmındaki boşlukları kaldır */
-        border-bottom: none; /* Alt kenarlığı kaldır */
-        background-color: transparent; /* Başlık kısmını da transparan yap */
+        padding: 0; 
+        border-bottom: none; 
+        background-color: transparent; 
     }
 
     .modal-footer {
-        padding: 0; /* Alt kısımda boşluk bırakma */
-        border-top: none; /* Üst kenarlığı kaldır */
-        background-color: transparent; /* Alt kısmı transparan yap */
+        padding: 0; 
+        border-top: none; 
+        background-color: transparent; 
     }
 
     .modal-lg {
-        max-width: 60%; /* Modalin genişliğini ayarlayabilirsin */
+        max-width: 60%; 
     }
 
     .modal-dialog {
-        margin: 120px auto; /* Modal merkezde kalsın */
-        width: 100%; /* Tam genişlikte yap */
+        margin: 120px auto;
+        width: 100%; 
     }
+
     .popup-image {
         width: auto;
-        border-radius:40px;
+        border-radius: 40px;
         height: auto;
-        max-height: 400px; /* İsterseniz fotoğrafların yüksekliğini sabitleyebilirsiniz */
-        object-fit: cover; /* Fotoğrafın alanı en iyi şekilde kaplamasını sağlar */
+        max-height: 400px;
+        object-fit: cover;
     }
+
     .p2 {
         color: white;
     }
-    
+    .scale:hover {
+        scale: 1.05;
+        transition: var(--transition);
+    }
 </style>
+
+
+<section>
+
+    <div class="falling-item" style="display:flex; align-items:center; justify-content:center; margin-left:400px;">
+        <h2 style="color:lavender;"><b>My working experience:</b></h2>
+    </div>
+
+    <div class="falling-item" style="box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7); border-radius: 70px; background-color: rgba(255, 255, 255, 0.6); width: 50%; margin-left: 47%;">
+        <div style="gap: 20px; display: flex; align-items: center; justify-content: flex-start;">
+            <img src="~/Media/doktas.png" alt="bs" width="200" height="200" style="height: 100%; width: 15%; border-top-left-radius: 70px; border-bottom-left-radius: 70px;" />
+            <h2><a href="https://www.doktas.com" style="text-decoration:none; color:inherit;">Döktaş Dökümcülük</a></h2>
+            <h2><span>Engineering Intern</span></h2>
+            <h2><span>AUG / OCT 2024</span></h2>
+        </div>
+    </div>
+    <br /><br />
+
+    <div class="falling-item" style="display:flex; align-items:center; justify-content:center; margin-left:250px;">
+        <h2 style="color:lavender;"><b>My projects:</b></h2>
+    </div>
+
+    <div class="falling-item" style="box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7); border-radius: 70px; background-color: rgba(255, 255, 255, 0.6); width: 50%; margin-left: 47%; margin-bottom: 25px;">
+        <div style="gap: 20px; display: flex; align-items: center; justify-content: flex-start;">
+            <img src="~/Media/eventolog (2).png" alt="bs" width="200" height="200" style="height: 100%; width: 15%; border-top-left-radius: 70px; border-bottom-left-radius: 70px;" />
+            <h2><a style="text-decoration: none; color: inherit;" href="https://github.com/Burak849/event-creator">Eventolog</a></h2>
+            <h2><span style="margin-left:120px;">A creating event website</span></h2>
+        </div>
+    </div>
+
+    <div class="falling-item" style="box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7); border-radius: 70px; background-color: rgba(255, 255, 255, 0.6); width: 50%; margin-left: 47%;">
+        <div style="gap: 20px; display: flex; align-items: center; justify-content: flex-start;">
+            <img src="~/Media/referral.png" alt="bs" width="200" height="200" style="height: 100%; width: 15%; border-top-left-radius: 70px; border-bottom-left-radius: 70px;" />
+            <h2><a style="text-decoration: none; color: inherit;" href="https://github.com/Burak849/doctors_referral">Doctor's Referral Form</a></h2>
+            <h2><span>Doctor's Permission Form for a factory's workers.</span></h2>
+        </div>
+    </div>
+
+</section>
+
+
 <div class="kont">
     <div class="gif-container">
         <img src="~/Media/hello-ezgif.gif" alt="Hellogif" style="background-repeat:no-repeat; width: 110%; height: auto;" />
@@ -135,7 +180,7 @@
                 <p>
                     Thanks for visiting my website! I hope you like the visitor interface. You will find my hobbies and activities in this "About Me" part, which will serve to give a better insight into who I am. To get to know me, click on the story button aside! I am looking forward to meeting you, see you soon!
                 </p>
-                <a class="btn btn-outline-light" style="border: none; background-color:transparent; color: black;" href="#popup"><b>My Story</b></a>
+                <a class="btn btn-outline-light scale" style="transition: var(--transition); cursor: pointer; border: none; background-color: transparent; color: black;" href="#popup"><b>My Story</b></a>
             </div>
         </div>
     </div>
@@ -158,64 +203,64 @@
                 <p class="p2">I was born on 1st of February in 2000. I had such an energic and social personality as a kid which is makes really big benefits late in my life. </p>
             </div>
             <div class="page" id="page-4">
-                
+
                 <img src="~/Media/Storyfold/5.jpg" alt="Page1" class="popup-image" />
                 <p class="p2">I was born on 1st of February in 2000. I had such an energic and social personality as a kid which is makes really big benefits late in my life. </pclass="p2">
             </div>
             <div class="page" id="page-5">
-                
+
                 <img src="~/Media/Storyfold/6.jpg" alt="Page1" class="popup-image" />
                 <p class="p2">I was born on 1st of February in 2000. I had such an energic and social personality as a kid which is makes really big benefits late in my life. </p>
             </div>
             <div class="page" id="page-6">
-                
+
                 <img src="~/Media/Storyfold/7.jpg" alt="Page1" class="popup-image" />
                 <p class="p2">I was born on 1st of February in 2000. I had such an energic and social personality as a kid which is makes really big benefits late in my life. </p>
             </div>
             <div class="page" id="page-7">
-                
+
                 <img src="~/Media/Storyfold/9.jpg" alt="Page1" class="popup-image" />
                 <p class="p2">I was born on 1st of February in 2000. I had such an energic and social personality as a kid which is makes really big benefits late in my life. </p>
             </div>
 
             <div class="page" id="page-8">
-                
+
                 <img src="~/Media/Storyfold/10.jpg" alt="Page1" class="popup-image" />
                 <p class="p2">I was born on 1st of February in 2000. I had such an energic and social personality as a kid which is makes really big benefits late in my life. </p>
             </div>
             <div class="page" id="page-9">
-                
+
                 <img src="~/Media/Storyfold/11.jpg" alt="Page1" class="popup-image" />
                 <p class="p2">I was born on 1st of February in 2000. I had such an energic and social personality as a kid which is makes really big benefits late in my life. </p>
             </div>
             <div class="page" id="page-10">
-                
+
                 <img src="~/Media/Storyfold/12.jpg" alt="Page1" class="popup-image" />
                 <p class="p2">I was born on 1st of February in 2000. I had such an energic and social personality as a kid which is makes really big benefits late in my life. </p>
             </div>
             <div class="page" id="page-11">
-                
+
                 <img src="~/Media/Storyfold/14.jpg" alt="Page1" class="popup-image" />
                 <p class="p2">I was born on 1st of February in 2000. I had such an energic and social personality as a kid which is makes really big benefits late in my life. </p>
             </div>
             <div class="page" id="page-12">
-                
+
                 <img src="~/Media/Storyfold/15.jpg" alt="Page1" class="popup-image" />
                 <p class="p2">I was born on 1st of February in 2000. I had such an energic and social personality as a kid which is makes really big benefits late in my life. </p>
             </div>
 
             <div class="page" id="page-13">
-               
+
                 <img src="~/Media/Storyfold/16.jpg" alt="Page1" class="popup-image" />
                 <p class="p2">I was born on 1st of February in 2000. I had such an energic and social personality as a kid which is makes really big benefits late in my life. </p>
             </div>
             <div class="page" id="page-14">
-                
+
                 <img src="~/Media/Storyfold/17.jpg" alt="Page1" class="popup-image" />
                 <p class="p2">I was born on 1st of February in 2000. I had such an energic and social personality as a kid which is makes really big benefits late in my life. </p>
             </div>
             <div class="page" id="page-15">
-                
+
                 <img src="~/Media/Storyfold/19.jpg" alt="Page1" class="popup-image" />
                 <p class="p2">I was born on 1st of February in 2000. I had such an energic and social personality as a kid which is makes really big benefits late in my life. </p>
             </div>
@@ -235,7 +280,7 @@
     }
 
 
-    let currentPage = 1; 
+    let currentPage = 1;
     function showPage(page) {
         let pages = document.querySelectorAll('.page');
         pages.forEach(function (p) {
@@ -246,13 +291,13 @@
 
     function nextPage() {
         let pages = document.querySelectorAll('.page').length;
-        currentPage = (currentPage % pages) + 1; // Son sayfaya geldiğinde başa dön
+        currentPage = (currentPage % pages) + 1; 
         showPage(currentPage);
     }
 
     function prevPage() {
         let pages = document.querySelectorAll('.page').length;
-        currentPage = (currentPage - 1) || pages; // İlk sayfadayken son sayfaya dön
+        currentPage = (currentPage - 1) || pages;
         showPage(currentPage);
     }
 
