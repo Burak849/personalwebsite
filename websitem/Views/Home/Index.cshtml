@@ -1,14 +1,14 @@
 ﻿@{
     ViewBag.Title = "Burak Kurtulush - Personal Website";
 }
-
+@model List<websitem.Controllers.MailModel>
 <style>
-    
+
     html, body {
         margin: 0;
         padding: 0;
         height: 100%;
-        background-image: url(/Media/starry.svg); 
+        background-image: url(/Media/starry.svg);
         background-size: cover;
         background-position: center;
         font-family: Arial, sans-serif;
@@ -31,15 +31,15 @@
     }
 
     .background2 {
-        position: relative; 
+        position: relative;
         margin-left: 0px;
-        margin-top: 32vh; 
+        margin-top: 32vh;
         width: auto;
-        height: auto; 
+        height: auto;
         background-color: #000017;
-        opacity: 0; 
-        transition: opacity 0.5s; 
-        z-index: 2; 
+        opacity: 0;
+        transition: opacity 0.5s;
+        z-index: 2;
         align-items: center;
     }
 
@@ -48,9 +48,9 @@
         margin-left: 0px;
         width: auto;
         height: auto;
-        background-color: white; 
-        background-image: none; 
-        opacity: 1; 
+        background-color: white;
+        background-image: none;
+        opacity: 1;
         transition: opacity 0.5s;
         color: black;
         z-index: 3;
@@ -73,7 +73,7 @@
 
     .blur-background {
         display: flex;
-        height: 330px; 
+        height: 330px;
         background: rgba(255, 255, 255, 0);
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
@@ -97,9 +97,9 @@
         margin-left: 0px;
         width: auto;
         height: auto;
-        background-color: black; 
-        background-image: none; 
-        opacity: 1; 
+        background-color: black;
+        background-image: none;
+        opacity: 1;
         transition: opacity 0.5s;
         color: white;
         z-index: 4;
@@ -115,7 +115,7 @@
     .card-container {
         display: flex;
         flex-wrap: wrap;
-        gap: 21px; 
+        gap: 21px;
         margin-top: 45px;
         flex-direction: row;
         align-items: center;
@@ -135,7 +135,7 @@
     }
 
     .service-item {
-        flex: 1; 
+        flex: 1;
         margin: 0 10px;
         text-align: center;
     }
@@ -146,7 +146,7 @@
 
     .background3 .flex {
         gap: 6rem;
-        justify-content:center;
+        justify-content: center;
         transition: color 2.5s 0.5s ease-in;
     }
 
@@ -189,8 +189,9 @@
     }
 
     .social-link:hover img {
-        transform: scale(1.1); 
+        transform: scale(1.1);
     }
+
     .scale:hover {
         scale: 1.1;
         transition: var(--transition);
@@ -266,7 +267,7 @@
                     <!-- Unvan -->
                     <div class="mb-3" style=" width: 20%; ">
                         <label for="title-select" class="form-label">Title</label>
-                        <select id="title-select" class="form-select" aria-label="Title">
+                        <select id="title-select" name="Title" class="form-select" aria-label="Title">
                             <option selected></option>
                             <option value="1">Mr.</option>
                             <option value="2">Mrs.</option>
@@ -278,28 +279,28 @@
                     <!-- Ad Soyad  -->
                     <div class="row mb-3">
                         <div class="col">
-                            <input type="text" class="form-control" id="name-input" placeholder="Name" required>
+                            <input type="text" class="form-control" name="Name" id="name-input" placeholder="Name" required>
                         </div>
                         <div class="col">
-                            <input type="text" class="form-control" id="surname-input" placeholder="Surname" required>
+                            <input type="text" class="form-control" name="Surname" id="surname-input" placeholder="Surname" required>
                         </div>
                     </div>
 
                     <!-- Telefon ve E-posta -->
                     <div class="row mb-3">
                         <div class="col">
-                            <input type="email" class="form-control" id="email-input" placeholder="Email"/>
-                            
+                            <input type="email" class="form-control" name="Email" id="email-input" placeholder="Email" required/>
+
                         </div>
                         <div class="col">
-                            <input type="tel" class="form-control" id="phone-input" placeholder="Phone Number" pattern="[0-9]{10}">
+                            <input type="tel" class="form-control" name="Phone" id="phone-input" placeholder="Phone Number" pattern="[0-9]{10}">
                         </div>
                     </div>
 
                     <!-- İletişim Yöntemi -->
                     <div class="mb-3">
                         <label for="contact-method" class="form-label">Preferred Communication Method</label>
-                        <select id="contact-method" class="form-select" style=" width: 35%; ">
+                        <select id="contact-method" name="ContactMethod" class="form-select" style=" width: 35%; ">
                             <option selected></option>
                             <option value="0">Email</option>
                             <option value="1">Phone Number</option>
@@ -308,14 +309,14 @@
 
                     <!-- Mesaj Alanı -->
                     <div class="mb-3">
-                        <textarea class="form-control" id="message-text" placeholder="Text" required></textarea>
+                        <textarea class="form-control" name="Message" id="message-text" placeholder="Text" required></textarea>
                     </div>
                 </form>
             </div>
 
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-primary" id="submitContactForm">Send Message</button>
+                <input type="submit" class="btn btn-primary" id="submitting" onclick="save()" value="Send Message"/>
             </div>
         </div>
     </div>
@@ -446,8 +447,8 @@
 </div>
 
 <footer role="contentinfo" class="background3">
-        <div class="[ wrapper ] [ flex between ]" style="font-size:24px;">
-    <article class="panel" id="footerSection">
+    <div class="[ wrapper ] [ flex between ]" style="font-size:24px;">
+        <article class="panel" id="footerSection">
 
             <div class="[ about tagline ]">
                 <h3 class="text-start">
@@ -477,20 +478,20 @@
                 <a href="tel:+905386447092" class="color-light">+90 538 644 7092</a>
             </address>
 
-    </article>
-            <div class="social-media text-center gap-top-600">
-                <h5>Social Media:</h5>
-                <a href="https://github.com/Burak849" target="_blank" class="social-link">
-                    <img src="~/Media/githubicon.png" alt="GitHub" width="30" height="30" />
-                </a>
-                <a href="https://linkedin.com/in/burak-kurtulush/" target="_blank" class="social-link">
-                    <img src="~/Media/linkedinicon.png" alt="LinkedIn" width="30" height="30" />
-                </a>
-                <a href="https://instagram.com/burak.krtlsh/" target="_blank" class="social-link">
-                    <img src="~/Media/instagicon.png" alt="Instagram" width="30" height="30" />
-                </a>
-            </div>
+        </article>
+        <div class="social-media text-center gap-top-600">
+            <h5>Social Media:</h5>
+            <a href="https://github.com/Burak849" target="_blank" class="social-link">
+                <img src="~/Media/githubicon.png" alt="GitHub" width="30" height="30" />
+            </a>
+            <a href="https://linkedin.com/in/burak-kurtulush/" target="_blank" class="social-link">
+                <img src="~/Media/linkedinicon.png" alt="LinkedIn" width="30" height="30" />
+            </a>
+            <a href="https://instagram.com/burak.krtlsh/" target="_blank" class="social-link">
+                <img src="~/Media/instagicon.png" alt="Instagram" width="30" height="30" />
+            </a>
         </div>
+    </div>
 
     <script>
         const easter = document.querySelector('a[href="#mail"]');
@@ -513,7 +514,7 @@
 
 
 <script>
-   
+
     window.onscroll = function () {
         const scrollPosition = document.body.scrollTop || document.documentElement.scrollTop;
 
@@ -530,11 +531,43 @@
     };
 
 
-    let codeIndex = 0;
+    $(document).ready(function () {
+        $('#submitting').click(function () {
+            save();
+        });
+    });
+    let shouldReload = true;
+    function save() {
 
-    setInterval(() => {
-        codeSymbol.src = codeImages[codeIndex];
-        codeIndex = (codeIndex + 1) % codeImages.length;
-    }, 3000); // Her 3 saniyede bir resmi değiştirir.
+        var formData = {
+            Title: $("select[name='Title']").val(),
+            Name: $("input[name='Name']").val(),
+            Surname: $("input[name='Surname']").val(),
+            Email: $("input[name='Email']").val(),
+            Phone: $("input[name='Phone']").val(),
+            ContactMethod: $("select[name='ContactMethod']").val(),
+            Message: $("textarea[name='Message']").val()
+        };
+        console.log(formData);
+        // AJAX isteği
+        $.ajax({
+            type: "POST",
+            url: '/Home/SubmitContactForm',
+            data: JSON.stringify(formData),  // JSON formatına çeviriyoruz
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (response) {
+                if (response.success) {
+                    alert(response.message);
+                } else {
+                    alert("Error: " + response.message);
+                }
+            },
+            error: function (xhr, status, error) {
+                alert("An error occurred: " + error);
+            }
+        });
+    }
+
 
 </script>

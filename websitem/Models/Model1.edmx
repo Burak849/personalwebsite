@@ -17,7 +17,7 @@ warning 6002: The table/view 'websitem.dbo.contact_tablo' does not have a primar
           <Property Name="surname" Type="varchar" MaxLength="50" />
           <Property Name="email" Type="varchar" MaxLength="50" />
           <Property Name="phone" Type="varchar" MaxLength="11" />
-          <Property Name="contactmethod" Type="bit" />
+          <Property Name="contactmethod" Type="varchar" MaxLength="50" />
           <Property Name="message" Type="varchar" MaxLength="500" />
           <Property Name="date" Type="datetime2" Precision="7" />
         </EntityType>
@@ -51,11 +51,11 @@ warning 6002: The table/view 'websitem.dbo.contact_tablo' does not have a primar
           <Property Name="surname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="phone" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
-          <Property Name="contactmethod" Type="Boolean" />
+          <Property Name="contactmethod" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="message" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
           <Property Name="date" Type="DateTime" Precision="7" />
         </EntityType>
-        <EntityContainer Name="websitemEntities1" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="websitemEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="contact_tablo" EntityType="Self.contact_tablo" />
         </EntityContainer>
       </Schema>
@@ -63,7 +63,7 @@ warning 6002: The table/view 'websitem.dbo.contact_tablo' does not have a primar
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="websitemModelStoreContainer" CdmEntityContainer="websitemEntities1">
+        <EntityContainerMapping StorageEntityContainer="websitemModelStoreContainer" CdmEntityContainer="websitemEntities">
           <EntitySetMapping Name="contact_tablo">
             <EntityTypeMapping TypeName="websitemModel.contact_tablo">
               <MappingFragment StoreEntitySet="contact_tablo">

@@ -20,7 +20,7 @@ namespace websitem.Models
         public string surname { get; set; }
         public string email { get; set; }
         public string phone { get; set; }
-        public Nullable<bool> contactmethod { get; set; }
+        public string contactmethod { get; set; }
         public string message { get; set; }
         public Nullable<System.DateTime> date { get; set; }
     }

@@ -7,7 +7,7 @@
 </head>
 <style>
     .navbar-expand-sm {
-        z-index:2;
+        z-index: 2;
     }
 
 
@@ -29,7 +29,7 @@
         font-family: roboto;
         font-style: normal;
         padding: 10px;
-        z-index:2;
+        z-index: 2;
     }
 
     .konteynir {
@@ -47,21 +47,22 @@
         align-items: center;
         z-index: 2;
     }
+
     .table-container {
-        max-height: 400px; 
-        width: 45%; 
-        overflow-y: auto; 
-        overflow-x: hidden; 
+        max-height: 400px;
+        width: 45%;
+        overflow-y: auto;
+        overflow-x: hidden;
         background-color: rgba(255, 255, 255, 0.8);
         border-radius: 10px;
         box-shadow: 0 15px 100px rgba(0, 0, 0, 0.9);
         margin-top: 20px;
-        z-index:2;
+        z-index: 2;
     }
+
     .table {
         border-collapse: collapse;
         text-align: left;
-   
     }
 
         .table th, .table td {
@@ -69,18 +70,18 @@
             padding: 15px;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
-        
+
         .table th {
-            /*background-color: rgba(255, 255, 255, 0.9);*/ 
-            background-color:lightslategray;
+            /*background-color: rgba(255, 255, 255, 0.9);*/
+            background-color: lightslategray;
         }
 
     .table-hover tbody tr:hover {
-        background-color: rgba(255, 255, 255, 0.1); 
+        background-color: rgba(255, 255, 255, 0.1);
     }
 
     .table-hover tbody tr:nth-child(even) {
-        background-color: rgba(255, 255, 255, 0.3); 
+        background-color: rgba(255, 255, 255, 0.3);
     }
 
     input[type="text"] {
@@ -91,8 +92,9 @@
         margin-bottom: 20px;
         font-size: 16px;
     }
-    p{
-        color:white;
+
+    p {
+        color: white;
     }
     /* Animasyon arkaplanı için stil */
     #bg {
@@ -101,7 +103,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        z-index: 0; 
+        z-index: 0;
     }
 
         #bg canvas {
@@ -112,11 +114,10 @@
             height: 100%;
             opacity: 0.3;
         }
-    ::-webkit-scrollbar {
 
+    ::-webkit-scrollbar {
         display: none;
     }
-
 </style>
 
 <div id="bg">
@@ -313,11 +314,45 @@
             </table>
         </div>
         <br />
-        <button class="btn btn-success btn-outline-secondary" style="border:none; z-index:2; width:15%; color:white;">Suggest me</button>
+        <button class="btn btn-success btn-outline-secondary" data-bs-target="#contactmodal" data-bs-toggle="modal" style="border:none; z-index:2; width:15%; color:white;">Suggest me</button>
         <br />
         <p style="color: white; z-index: 2;">Please beware that this list will always be incomplete and outdated, as I am constantly learning. It is, however, a great way to quickly scan my knowledge and experience.</p>
     </div>
 </div>
+
+
+<div class="modal fade" id="contactmodal" tabindex="-1" aria-labelledby="contactmodalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="contactmodalLabel">Suggest me</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="contactForm">
+                   
+                    <!-- Konu  -->
+                    <div class="row mb-3">
+                        <div class="col">
+                            <input type="text" class="form-control" id="topic-input" style="border: 1px solid #ced4da;" placeholder="Topic" required>
+                        </div>
+                    </div>
+
+                    <!-- Mesaj Alanı -->
+                    <div class="mb-3">
+                        <textarea class="form-control" id="message-text" placeholder="Text" required></textarea>
+                    </div>
+                </form>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary" id="submitContactForm">Send</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 <script>
     function searchTable() {

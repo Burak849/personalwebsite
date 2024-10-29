@@ -13,10 +13,10 @@ namespace websitem.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class websitemEntities1 : DbContext
+    public partial class websitemEntities : DbContext
     {
-        public websitemEntities1()
-            : base("name=websitemEntities1")
+        public websitemEntities()
+            : base("name=websitemEntities")
         {
         }
     
