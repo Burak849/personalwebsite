@@ -167,7 +167,7 @@
                         <td>🔥 Have a lot of experience</td>
                     </tr>
                     <tr>
-                        <td>ASP.NET</td>
+                        <td>.NET</td>
                         <td>🔥 Have a lot of experience</td>
                     </tr>
                     <tr>
@@ -212,6 +212,10 @@
                     </tr>
                     <tr>
                         <td>MySQL</td>
+                        <td>👍 Have a bit of experience</td>
+                    </tr>
+                    <tr>
+                        <td>ADO.NET</td>
                         <td>👍 Have a bit of experience</td>
                     </tr>
                     <tr>
@@ -334,20 +338,20 @@
                     <!-- Konu  -->
                     <div class="row mb-3">
                         <div class="col">
-                            <input type="text" class="form-control" id="topic-input" style="border: 1px solid #ced4da;" placeholder="Topic" required>
+                            <input type="text" class="form-control" name="topic" id="topic-input" style="border: 1px solid #ced4da;" placeholder="Topic" required>
                         </div>
                     </div>
 
                     <!-- Mesaj Alanı -->
                     <div class="mb-3">
-                        <textarea class="form-control" id="message-text" placeholder="Text" required></textarea>
+                        <textarea class="form-control" id="message-text" name="textar" placeholder="Text" required></textarea>
                     </div>
                 </form>
             </div>
 
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-primary" id="submitContactForm">Send</button>
+                <input type="submit" class="btn btn-primary" id="submittinsuggestion" onclick="kaydet()" value="Send"/>
             </div>
         </div>
     </div>
@@ -355,6 +359,42 @@
 
 
 <script>
+
+
+    $(document).ready(function () {
+        $('#contactForm').submit(function (e) {
+            e.preventDefault(); // Sayfanın yeniden yüklenmesini engeller
+            kaydet();
+        });
+    });
+    let shouldReload = true;
+    function kaydet() {
+
+        var formData = {
+            Topic: $("input[name='topic']").val(),
+            Mesaj: $("textarea[name='textar']").val(),
+        };
+        console.log(formData);
+        // AJAX isteği
+        $.ajax({
+            type: "POST",
+            url: '/Home/SubmitSuggestForm',
+            data: JSON.stringify(formData),  // JSON formatına çeviriyoruz
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (response) {
+                if (response.success) {
+                    alert(response.message);
+                } else {
+                    alert("Error: " + response.message);
+                }
+            },
+            error: function (xhr, status, error) {
+                alert("An error occurred: " + error);
+            }
+        });
+    }
+
     function searchTable() {
         var input, filter, table, tr, td, i, txtValue;
         input = document.getElementById("search");

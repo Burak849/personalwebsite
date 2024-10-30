@@ -16,5 +16,14 @@
   </EntityType>
   <EntityContainer Name="websitemEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="contact_tablo" EntityType="Self.contact_tablo" />
+    <EntitySet Name="suggest_tablo" EntityType="websitemModel.suggest_tablo" />
   </EntityContainer>
+  <EntityType Name="suggest_tablo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="topic" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="mesaj" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
 </Schema>

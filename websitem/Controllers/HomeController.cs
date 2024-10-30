@@ -35,6 +35,15 @@ namespace websitem.Controllers
         // Date alanı burada yer almıyor çünkü SQL'de ayarlandı.
     }
 
+    public class SuggestModel
+    {
+        [Required(ErrorMessage = "Topic is required.")]
+        public string Topic { get; set; }
+        [Required(ErrorMessage = "Message is required.")]
+        public string Mesaj {  get; set; }
+
+    }
+
     public class HomeController : Controller
     {
         private websitemEntities db = new websitemEntities();
@@ -73,6 +82,38 @@ namespace websitem.Controllers
                 }
             }
         }
+
+
+        [HttpPost]
+        public JsonResult SubmitSuggestForm(SuggestModel suggest)
+        {
+            if (!ModelState.IsValid)
+            {
+                var errors = ModelState.SelectMany(x => x.Value.Errors)
+                                        .Select(x => x.ErrorMessage)
+                                        .ToList();
+                return Json(new { success = false, message = "Validation errors occurred.", errors });
+            }
+            else
+            {
+                try
+                {
+                    // SQL komutu ile veritabanına ekleme
+                    db.Database.ExecuteSqlCommand("INSERT INTO suggest_tablo (topic, mesaj) " +
+                                                  "VALUES (@Topic , @Mesaj)",
+                        new SqlParameter("@Topic", suggest.Topic),
+                        new SqlParameter("@Mesaj", suggest.Mesaj));
+
+                    return Json(new { success = true, message = "Message sent successfully." });
+                }
+                catch (Exception ex)
+                {
+                    var errors = ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage);
+                    return Json(new { success = false, message = "Failed to send message.", errorDetails = ex.Message, errors = errors });
+                }
+            }
+        }
+
 
         public ActionResult Index()
         {

@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="websitemModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="websitemModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <!--Errors Found During Generation:
 warning 6002: The table/view 'websitem.dbo.contact_tablo' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="contact_tablo">
@@ -21,6 +21,16 @@ warning 6002: The table/view 'websitem.dbo.contact_tablo' does not have a primar
           <Property Name="message" Type="varchar" MaxLength="500" />
           <Property Name="date" Type="datetime2" Precision="7" />
         </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'websitem.dbo.suggest_tablo' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="suggest_tablo">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="topic" Type="varchar" MaxLength="50" />
+          <Property Name="mesaj" Type="varchar" MaxLength="500" />
+        </EntityType>
         <EntityContainer Name="websitemModelStoreContainer">
           <EntitySet Name="contact_tablo" EntityType="Self.contact_tablo" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
@@ -35,9 +45,15 @@ warning 6002: The table/view 'websitem.dbo.contact_tablo' does not have a primar
     [contact_tablo].[date] AS [date]
     FROM [dbo].[contact_tablo] AS [contact_tablo]</DefiningQuery>
           </EntitySet>
+          <EntitySet Name="suggest_tablo" EntityType="Self.suggest_tablo" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [suggest_tablo].[id] AS [id], 
+    [suggest_tablo].[topic] AS [topic], 
+    [suggest_tablo].[mesaj] AS [mesaj]
+    FROM [dbo].[suggest_tablo] AS [suggest_tablo]</DefiningQuery>
+          </EntitySet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="websitemModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -57,7 +73,16 @@ warning 6002: The table/view 'websitem.dbo.contact_tablo' does not have a primar
         </EntityType>
         <EntityContainer Name="websitemEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="contact_tablo" EntityType="Self.contact_tablo" />
+          <EntitySet Name="suggest_tablo" EntityType="websitemModel.suggest_tablo" />
         </EntityContainer>
+        <EntityType Name="suggest_tablo">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="topic" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="mesaj" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -76,6 +101,15 @@ warning 6002: The table/view 'websitem.dbo.contact_tablo' does not have a primar
                 <ScalarProperty Name="contactmethod" ColumnName="contactmethod" />
                 <ScalarProperty Name="message" ColumnName="message" />
                 <ScalarProperty Name="date" ColumnName="date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="suggest_tablo">
+            <EntityTypeMapping TypeName="websitemModel.suggest_tablo">
+              <MappingFragment StoreEntitySet="suggest_tablo">
+                <ScalarProperty Name="mesaj" ColumnName="mesaj" />
+                <ScalarProperty Name="topic" ColumnName="topic" />
+                <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

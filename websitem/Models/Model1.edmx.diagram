@@ -6,6 +6,7 @@
     <edmx:Diagrams>
       <Diagram DiagramId="75cf48dbcf7b4b2bab1e8b1351926f8d" Name="Diagram1">
         <EntityTypeShape EntityType="websitemModel.contact_tablo" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="websitemModel.suggest_tablo" Width="1.5" PointX="3.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

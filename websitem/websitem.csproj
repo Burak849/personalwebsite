@@ -151,6 +151,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\suggest_tablo.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -175,12 +178,14 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Media\alternatif-removebg-preview.png" />
     <Content Include="Media\aspnet.png" />
     <Content Include="Media\B.png" />
     <Content Include="Media\background2.jpg" />
     <Content Include="Media\bs.png" />
     <Content Include="Media\csharp-logo-265a149e.svg" />
     <Content Include="Media\css.png" />
+    <Content Include="Media\denemelogo-removebg-preview.png" />
     <Content Include="Media\doktas.png" />
     <Content Include="Media\eventolog %282%29.png" />
     <Content Include="Media\file.png" />

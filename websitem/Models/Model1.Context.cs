@@ -26,5 +26,6 @@ namespace websitem.Models
         }
     
         public virtual DbSet<contact_tablo> contact_tablo { get; set; }
+        public virtual DbSet<suggest_tablo> suggest_tablo { get; set; }
     }
 }

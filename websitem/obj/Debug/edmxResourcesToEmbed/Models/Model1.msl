@@ -16,5 +16,14 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="suggest_tablo">
+      <EntityTypeMapping TypeName="websitemModel.suggest_tablo">
+        <MappingFragment StoreEntitySet="suggest_tablo">
+          <ScalarProperty Name="mesaj" ColumnName="mesaj" />
+          <ScalarProperty Name="topic" ColumnName="topic" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>
