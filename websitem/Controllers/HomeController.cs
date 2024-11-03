@@ -9,6 +9,9 @@ using System.Web.Mvc;
 using websitem.Models;
 using System.Data.SqlClient;
 using System.ComponentModel.DataAnnotations;
+using System.Configuration;
+using System.Net.Configuration;
+
 
 namespace websitem.Controllers
 {
@@ -73,7 +76,10 @@ namespace websitem.Controllers
                         new SqlParameter("@ContactMethod", contact.ContactMethod),
                         new SqlParameter("@Message", contact.Message));
 
-                        return Json(new { success = true, message = "Message sent successfully." });
+                    // E-posta gönderme işlemi
+                    SendEmail(contact); // Burada SendEmail metodunu çağırıyoruz
+
+                    return Json(new { success = true, message = "Message sent and saved successfully." });
                 }
                 catch (Exception ex)
                 {
@@ -83,6 +89,25 @@ namespace websitem.Controllers
             }
         }
 
+        private void SendEmail(MailModel contact)
+        {
+            var message = new MailMessage
+            {
+                From = new MailAddress(contact.Email), // Gönderen adres
+                Subject = "Websitem Contact Mesaji",
+                Body = $"Title: {contact.Title}\nName: {contact.Name}\nSurname: {contact.Surname}\nEmail: {contact.Email}\nPhone: {contact.Phone}\nPreferred Communication Method: {contact.ContactMethod}\nMessage: {contact.Message}",
+                IsBodyHtml = false
+            };
+            message.To.Add(new MailAddress("sebahattin.kurtulus16@gmail.com"));  // Alıcı adresi
+
+            using (var smtp = new SmtpClient("smtp.gmail.com", 587))
+            {
+                var smtpSection = (SmtpSection)ConfigurationManager.GetSection("system.net/mailSettings/smtp");
+                smtp.Credentials = new NetworkCredential(smtpSection.Network.UserName, smtpSection.Network.Password);
+                smtp.EnableSsl = true;
+                smtp.Send(message);
+            }
+        } 
 
         [HttpPost]
         public JsonResult SubmitSuggestForm(SuggestModel suggest)
