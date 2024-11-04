@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "C:\\Users\\burak\\OneDrive\\Masa\u00FCst\u00FC\\websitem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C42DB518-8732-489D-8FB4-6384E780E9BC}|websitem\\websitem.csproj|c:\\users\\burak\\onedrive\\masa\u00FCst\u00FC\\websitem\\websitem\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{C42DB518-8732-489D-8FB4-6384E780E9BC}|websitem\\websitem.csproj|C:\\Users\\burak\\OneDrive\\Masa\u00FCst\u00FC\\websitem\\websitem\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{C42DB518-8732-489D-8FB4-6384E780E9BC}|websitem\\websitem.csproj|solutionrelative:websitem\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C42DB518-8732-489D-8FB4-6384E780E9BC}|websitem\\websitem.csproj|c:\\users\\burak\\onedrive\\masa\u00FCst\u00FC\\websitem\\websitem\\views\\home\\skills.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{C42DB518-8732-489D-8FB4-6384E780E9BC}|websitem\\websitem.csproj|C:\\Users\\burak\\OneDrive\\Masa\u00FCst\u00FC\\websitem\\websitem\\views\\home\\skills.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{C42DB518-8732-489D-8FB4-6384E780E9BC}|websitem\\websitem.csproj|solutionrelative:websitem\\views\\home\\skills.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
@@ -43,8 +43,7 @@
               "RelativeToolTip": "websitem\\Views\\Home\\Skills.cshtml",
               "ViewState": "AgIAAAsBAAAAAAAAAAAAACYBAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-04T12:43:07.442Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-04T12:43:07.442Z"
             }
           ]
         }

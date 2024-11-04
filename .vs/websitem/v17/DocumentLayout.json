@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\burak\\OneDrive\\Masa\u00FCst\u00FC\\websitem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C42DB518-8732-489D-8FB4-6384E780E9BC}|websitem\\websitem.csproj|c:\\users\\burak\\onedrive\\masa\u00FCst\u00FC\\websitem\\websitem\\dockerfile.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{C42DB518-8732-489D-8FB4-6384E780E9BC}|websitem\\websitem.csproj|solutionrelative:websitem\\dockerfile.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{C42DB518-8732-489D-8FB4-6384E780E9BC}|websitem\\websitem.csproj|c:\\users\\burak\\onedrive\\masa\u00FCst\u00FC\\websitem\\websitem\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{C42DB518-8732-489D-8FB4-6384E780E9BC}|websitem\\websitem.csproj|solutionrelative:websitem\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C42DB518-8732-489D-8FB4-6384E780E9BC}|websitem\\websitem.csproj|c:\\users\\burak\\onedrive\\masa\u00FCst\u00FC\\websitem\\websitem\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -27,14 +27,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Dockerfile.txt",
-              "DocumentMoniker": "C:\\Users\\burak\\OneDrive\\Masa\u00FCst\u00FC\\websitem\\websitem\\Dockerfile.txt",
-              "RelativeDocumentMoniker": "websitem\\Dockerfile.txt",
-              "ToolTip": "C:\\Users\\burak\\OneDrive\\Masa\u00FCst\u00FC\\websitem\\websitem\\Dockerfile.txt",
-              "RelativeToolTip": "websitem\\Dockerfile.txt",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2024-11-04T18:11:29.248Z",
+              "Title": "Dockerfile",
+              "DocumentMoniker": "C:\\Users\\burak\\OneDrive\\Masa\u00FCst\u00FC\\websitem\\websitem\\Dockerfile",
+              "RelativeDocumentMoniker": "websitem\\Dockerfile",
+              "ToolTip": "C:\\Users\\burak\\OneDrive\\Masa\u00FCst\u00FC\\websitem\\websitem\\Dockerfile",
+              "RelativeToolTip": "websitem\\Dockerfile",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-11-04T18:30:44.872Z",
               "EditorCaption": ""
             },
             {
