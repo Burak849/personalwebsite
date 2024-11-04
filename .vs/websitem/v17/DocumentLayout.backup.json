@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\burak\\OneDrive\\Masa\u00FCst\u00FC\\websitem\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C42DB518-8732-489D-8FB4-6384E780E9BC}|websitem\\websitem.csproj|c:\\users\\burak\\onedrive\\masa\u00FCst\u00FC\\websitem\\websitem\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C42DB518-8732-489D-8FB4-6384E780E9BC}|websitem\\websitem.csproj|solutionrelative:websitem\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C42DB518-8732-489D-8FB4-6384E780E9BC}|websitem\\websitem.csproj|c:\\users\\burak\\onedrive\\masa\u00FCst\u00FC\\websitem\\websitem\\views\\home\\skills.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C42DB518-8732-489D-8FB4-6384E780E9BC}|websitem\\websitem.csproj|solutionrelative:websitem\\views\\home\\skills.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\burak\\OneDrive\\Masa\u00FCst\u00FC\\websitem\\websitem\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "websitem\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\burak\\OneDrive\\Masa\u00FCst\u00FC\\websitem\\websitem\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "websitem\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAACUAAABcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-04T13:30:05.738Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Skills.cshtml",
+              "DocumentMoniker": "C:\\Users\\burak\\OneDrive\\Masa\u00FCst\u00FC\\websitem\\websitem\\Views\\Home\\Skills.cshtml",
+              "RelativeDocumentMoniker": "websitem\\Views\\Home\\Skills.cshtml",
+              "ToolTip": "C:\\Users\\burak\\OneDrive\\Masa\u00FCst\u00FC\\websitem\\websitem\\Views\\Home\\Skills.cshtml",
+              "RelativeToolTip": "websitem\\Views\\Home\\Skills.cshtml",
+              "ViewState": "AgIAAAsBAAAAAAAAAAAAACYBAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-04T12:43:07.442Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

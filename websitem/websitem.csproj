@@ -175,6 +175,7 @@
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Content\stiller.css" />
     <Content Include="Content\style.css" />
+    <Content Include="Dockerfile.txt" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -243,6 +244,7 @@
     <Content Include="Models\Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </Content>
+    <Content Include="Download\cv.pdf" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
     <Content Include="Scripts\jquery-3.7.0.min.js" />
