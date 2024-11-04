@@ -45,6 +45,7 @@ namespace websitem.Controllers
         [Required(ErrorMessage = "Message is required.")]
         public string Mesaj {  get; set; }
 
+
     }
 
     public class HomeController : Controller
@@ -77,7 +78,7 @@ namespace websitem.Controllers
                         new SqlParameter("@Message", contact.Message));
 
                     // E-posta gönderme işlemi
-                    SendEmail(contact); // Burada SendEmail metodunu çağırıyoruz
+                    SendEmail(contact);
 
                     return Json(new { success = true, message = "Message sent and saved successfully." });
                 }
@@ -128,6 +129,8 @@ namespace websitem.Controllers
                                                   "VALUES (@Topic , @Mesaj)",
                         new SqlParameter("@Topic", suggest.Topic),
                         new SqlParameter("@Mesaj", suggest.Mesaj));
+                    // E-posta gönderme işlemi
+                    SendSuggestion(suggest);
 
                     return Json(new { success = true, message = "Message sent successfully." });
                 }
@@ -139,7 +142,24 @@ namespace websitem.Controllers
             }
         }
 
+        private void SendSuggestion(SuggestModel suggest)
+        {
+            var message = new MailMessage
+            {
+                Subject = "Websitem Suggest Mesajı",
+                Body = $"Topic: {suggest.Topic}\nMessage: {suggest.Mesaj}",
+                IsBodyHtml = false
+            };
+            message.To.Add(new MailAddress("sebahattin.kurtulus16@gmail.com"));  // Alıcı adresi
 
+            using (var smtp = new SmtpClient("smtp.gmail.com", 587))
+            {
+                var smtpSection = (SmtpSection)ConfigurationManager.GetSection("system.net/mailSettings/smtp");
+                smtp.Credentials = new NetworkCredential(smtpSection.Network.UserName, smtpSection.Network.Password);
+                smtp.EnableSsl = true;
+                smtp.Send(message);
+            }
+        }
         public ActionResult Index()
         {
             return View();

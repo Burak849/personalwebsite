@@ -3,6 +3,7 @@
 ################################################################################
 
 .vs/
+/websitem/Media
 /websitem/Web.config
 /websitem/Web.Debug.config
 /websitem/Web.Release.config
