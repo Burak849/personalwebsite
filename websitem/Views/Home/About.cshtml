@@ -29,47 +29,12 @@
         justify-content: flex-end;
     }
 
-    .gif-container {
-        margin-top: 20px;
-    }
+    
 
     .btn-container {
         margin-top: 20px;
     }
-    /* Düşünce balonu stili */
-    .thought-bubble {
-        position: absolute;
-        top: 47%; 
-        left: 13%;
-        transform: translateX(-50%);
-        background-color: white;
-        border-radius: 10px;
-        padding: 10px;
-       /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);*/
-        width: 500px; 
-        height: auto;
-        background-color: wheat;
-        animation: customAni 2s ease 0s 1 normal both;
-    }
-
-        .thought-bubble::after {
-            content: '';
-            position: absolute;
-            bottom: 0%;
-            left: -2%;
-            margin-left: -16px;
-            border-width: 30px;
-            border-style: solid;
-            border-color: transparent transparent wheat transparent;
-        }
-
-    .bubble-content {
-        text-align: center;
-    }
-
-    .btn:hover {
-        background-color: wheat;
-    }
+   
 
     .carousel-item img {
         width: 100%; 
@@ -131,13 +96,13 @@
 </style>
 
 
-<section>
+<section style="display: flex; flex-direction: column; flex-wrap: wrap; align-content: flex-end; justify-content: center; align-items: center;">
 
-    <div class="falling-item" style="display:flex; align-items:center; justify-content:center; margin-left:400px;">
+    <div class="falling-item " style="display:flex; align-items:center; justify-content:center; margin-left:400px;">
         <h2 style="color:lavender;"><b>My working experience:</b></h2>
     </div>
 
-    <div class="falling-item" style="box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7); border-radius: 70px; background-color: rgba(255, 255, 255, 0.6); width: 50%; margin-left: 47%;">
+    <div class="falling-item dusen">
         <div style="gap: 20px; display: flex; align-items: center; justify-content: flex-start;">
             <img src="~/Media/doktas.png" alt="bs" width="200" height="200" style="height: 100%; width: 15%; border-top-left-radius: 70px; border-bottom-left-radius: 70px;" />
             <h2><a href="https://www.doktas.com" style="text-decoration:none; color:inherit;">Döktaş Dökümcülük</a></h2>
@@ -147,11 +112,11 @@
     </div>
     <br /><br />
 
-    <div class="falling-item" style="display:flex; align-items:center; justify-content:center; margin-left:250px;">
+    <div class="falling-item">
         <h2 style="color:lavender;"><b>My projects:</b></h2>
     </div>
 
-    <div class="falling-item" style="box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7); border-radius: 70px; background-color: rgba(255, 255, 255, 0.6); width: 50%; margin-left: 47%; margin-bottom: 25px;">
+    <div class="falling-item dusen">
         <div style="gap: 20px; display: flex; align-items: center; justify-content: flex-start;">
             <img src="~/Media/eventolog (2).png" alt="bs" width="200" height="200" style="height: 100%; width: 15%; border-top-left-radius: 70px; border-bottom-left-radius: 70px;" />
             <h2><a style="text-decoration: none; color: inherit;" href="https://github.com/Burak849/event-creator">Eventolog</a></h2>
@@ -159,7 +124,7 @@
         </div>
     </div>
 
-    <div class="falling-item" style="box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7); border-radius: 70px; background-color: rgba(255, 255, 255, 0.6); width: 50%; margin-left: 47%;">
+    <div class="falling-item dusen">
         <div style="gap: 20px; display: flex; align-items: center; justify-content: flex-start;">
             <img src="~/Media/referral.png" alt="bs" width="200" height="200" style="height: 100%; width: 15%; border-top-left-radius: 70px; border-bottom-left-radius: 70px;" />
             <h2><a style="text-decoration: none; color: inherit;" href="https://github.com/Burak849/doctors_referral">Doctor's Referral Form</a></h2>
@@ -172,7 +137,7 @@
 
 <div class="kont">
     <div class="gif-container">
-        <img src="~/Media/hello-ezgif.gif" alt="Hellogif" style="background-repeat:no-repeat; width: 110%; height: auto;" />
+        <img src="~/Media/hello-ezgif.gif" alt="Hellogif" />
 
         <div class="thought-bubble">
             <div class="bubble-content">
