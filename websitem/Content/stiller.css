@@ -14,53 +14,209 @@ html, body {
     transition: background-image 0.5s;
     font-size: 16px;
 }
+/*/////////////////////////////////MIN-WIDTH::after480PX ALANI///////////////////////////////*/
+@media screen and (max-width: 480px) {
+        html, body {
+            font-size: 12px;
+            padding: 15px;
+        }
+        .hello{
+            height:auto;
+            width:auto;
+            margin-left:-10%;
+        }
+        .falling-item {
+            opacity: 0;
+            position: relative;
+            animation: fall 1s ease-in-out forwards;
+        }
+        .dusen {
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
+            border-radius: 70px;
+            background-color: rgba(255, 255, 255, 0.6);
+            width: auto;
+            margin-bottom: 20px;
+        }
+        .navbar > .container {
+            display: flex;
+            align-items: center;
+            flex-wrap: nowrap;
+        }
+        .navbar-expand-sm .navbar-nav .nav-link {
+            font-size: 11px;
+            padding-right: var(--bs-navbar-nav-link-padding-x);
+            padding-left: var(--bs-navbar-nav-link-padding-x);
+        }
+        img {
+            height: 60px;
+            width: 85%;
+        }
+        .konteynir {
+            display: flex;
+            margin: auto;
+            height: auto;
+            background: transparent;
+            font-family: cursive;
+            font-size: xx-large;
+            opacity: 1;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: flex-start;
+            align-items: center;
+            z-index: 2;
+        }
+        .navbar-toggler {
+            color: white;
+            display: block;
+        }
+        .table-container {
+            max-height: 400px;
+            width: auto;
+            overflow-y: auto;
+            overflow-x: hidden;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 15px 100px rgba(0, 0, 0, 0.9);
+            margin-top: 20px;
+            z-index: 2;
+        }
+        .mediali {
+            width: 40%;
+            border: none;
+            z-index: 2;
+            width: auto;
+            color: white;
+        }
+        .gif-container {
+            background-repeat: no-repeat;
+            width: 80%;
+            height: 118%;
+        }
 
-@media screen and (min-width: 768px) {
-    html, body{
-    font-size: 12px;
-    padding: 15px;
-}
+        .btn-container {
+            margin-top: 20px;
+        }
 
-}
-@media(min-width:480px){
+        .button {
+            text-decoration: none;
+            font-size: .875rem;
+            font-weight: 300;
+            text-transform: uppercase;
+            display: inline-block;
+            border-radius: 1.5rem;
+            background-color: #fff;
+            color: $main-color;
+            padding: 1rem 2rem;
+        }
 
-.dusen {
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
-    border-radius: 70px;
-    background-color: rgba(255, 255, 255, 0.6);
-    width: auto;
-}
+        .kont {
+            display: flex;
+            flex-direction: column;
+            align-items: baseline;
+            justify-content: flex-end;
+        }
+        /* Düşünce balonu stili */
+        .thought-bubble {
+            position: absolute;
+            top: 61%;
+            display: flex;
+            justify-content: center;
+            left: 40%;
+            transform: translateX(-50%);
+            background-color: wheat;
+            border-radius: 10px;
+            padding: 5px;
+            width: 55%;
+            height: auto;
+            animation: customAni 2s ease 0s 1 normal both;
+        }
 
+            .thought-bubble::after {
+                content: '';
+                position: absolute;
+                bottom: 25%;
+                left: -4%;
+                margin-left: -16px;
+                border-width: 15px;
+                border-style: solid;
+                border-color: transparent wheat wheat transparent;
+            }
 
-.konteynir {
-    display: flex;
-    margin: auto;
-    height: auto;
-    background: transparent;
-    font-family: cursive;
-    font-size: xx-large;
-    opacity: 1;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: flex-start;
-    align-items: center;
-    z-index: 2;
-}
+        .bubble-content {
+            text-align: center;
+        }
 
-    .navbar-toggler {
-        color:white;
-        display: block;
+        .btn:hover {
+            background-color: grey;
+        }
     }
 
+    @media (min-width:480px) and (max-width:1024px) {
 
+        html, body {
+            font-size: 12px;
+            padding: 15px;
+        }
 
+        .hello {
+            height: auto;
+            width: auto;
+            margin-left: -10%;
+        }
 
-    .navbar-toggler {
-        color: white;
-        display: none;
-    }
- 
+        .falling-item {
+            opacity: 0;
+            position: relative;
+            animation: fall 1s ease-in-out forwards;
+        }
+
+        .dusen {
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
+            border-radius: 70px;
+            background-color: rgba(255, 255, 255, 0.6);
+            width: auto;
+            margin-bottom: 20px;
+        }
+
+        .navbar > .container {
+            display: flex;
+            align-items: center;
+            flex-wrap: nowrap;
+        }
+
+        .navbar-expand-sm .navbar-nav .nav-link {
+            font-size: 11px;
+            padding-right: var(--bs-navbar-nav-link-padding-x);
+            padding-left: var(--bs-navbar-nav-link-padding-x);
+        }
+
+        img {
+            height: 60px;
+            width: 85%;
+        }
+
+        .konteynir {
+            display: flex;
+            margin: auto;
+            height: auto;
+            background: transparent;
+            font-family: cursive;
+            font-size: xx-large;
+            opacity: 1;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: flex-start;
+            align-items: center;
+            z-index: 2;
+        }
+
+        .navbar-toggler {
+            color: white;
+            display: block;
+        }
+
         .table-container {
             max-height: 400px;
             width: auto;
@@ -80,109 +236,112 @@ html, body {
             width: auto;
             color: white;
         }
-    
 
-   
-        .table-container {
-            max-height: 400px;
-            width: 60%;
-            overflow-y: auto;
-            overflow-x: hidden;
-            background-color: rgba(255, 255, 255, 0.8);
-            border-radius: 10px;
-            box-shadow: 0 15px 100px rgba(0, 0, 0, 0.9);
+        .gif-container {
+            background-repeat: no-repeat;
+            width: 80%;
+            height: 118%;
+        }
+
+        .btn-container {
             margin-top: 20px;
-            z-index: 2;
         }
 
-        .mediali {
-            width: 70%;
-            border: none;
-            z-index: 2;
-            width: auto;
-            color: white;
+        .button {
+            text-decoration: none;
+            font-size: .875rem;
+            font-weight: 300;
+            text-transform: uppercase;
+            display: inline-block;
+            border-radius: 1.5rem;
+            background-color: #fff;
+            color: $main-color;
+            padding: 1rem 2rem;
         }
 
-
-
-
-
-    .gif-container {
-        background-repeat: no-repeat;
-        width: 80%;
-        height: auto;
-    }
-
-    .btn-container {
-        margin-top: 20px;
-    }
-
-    .button {
-        text-decoration: none;
-        font-size: .875rem;
-        font-weight: 300;
-        text-transform: uppercase;
-        display: inline-block;
-        border-radius: 1.5rem;
-        background-color: #fff;
-        color: $main-color;
-        padding: 1rem 2rem;
-    }
-
-    .kont {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 11vh;
-        align-items: baseline;
-        justify-content: flex-end;
-    }
-    /* Düşünce balonu stili */
-    .thought-bubble {
-        position: absolute;
-        top: 77%;
-        display:flex;
-        justify-content:center;
-        left: 55%;
-        transform: translateX(-50%);
-        background-color: wheat;
-        border-radius: 10px;
-        padding: 10px;
-        width: 50%;
-        height: auto;
-        animation: customAni 2s ease 0s 1 normal both;
-    }
-
-        .thought-bubble::after {
-            content: '';
+        .kont {
+            display: flex;
+            flex-direction: column;
+            align-items: baseline;
+            justify-content: flex-end;
+        }
+        /* Düşünce balonu stili */
+        .thought-bubble {
             position: absolute;
-            bottom: 43%;
-            left: -4%;
-            margin-left: -16px;
-            border-width: 15px;
-            border-style: solid;
-            border-color: transparent wheat wheat transparent;
+            top: 61%;
+            display: flex;
+            justify-content: center;
+            left: 40%;
+            transform: translateX(-50%);
+            background-color: wheat;
+            border-radius: 10px;
+            padding: 5px;
+            width: 55%;
+            height: auto;
+            animation: customAni 2s ease 0s 1 normal both;
         }
 
-    .bubble-content {
-        text-align: center;
+            .thought-bubble::after {
+                content: '';
+                position: absolute;
+                bottom: 25%;
+                left: -4%;
+                margin-left: -16px;
+                border-width: 15px;
+                border-style: solid;
+                border-color: transparent wheat wheat transparent;
+            }
+
+        .bubble-content {
+            text-align: center;
+        }
+
+        .btn:hover {
+            background-color: grey;
+        }
+    }
+@media (min-width:1024px) {
+
+    html, body {
+        font-size: 12px;
+        padding: 15px;
     }
 
-    .btn:hover {
-        background-color: grey;
-    }
+    .hello {
+        height: auto;
+        width: auto;
     }
 
-@media(min-width:479px) {
+    .falling-item {
+        opacity: 0;
+        position: relative;
+        animation: fall 1s ease-in-out forwards;
+    }
 
     .dusen {
         box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
         border-radius: 70px;
         background-color: rgba(255, 255, 255, 0.6);
         width: 50%;
+        margin-bottom: 20px;
     }
 
+    .navbar > .container {
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+
+    .navbar-expand-sm .navbar-nav .nav-link {
+        font-size: 20px;
+        padding-right: var(--bs-navbar-nav-link-padding-x);
+        padding-left: var(--bs-navbar-nav-link-padding-x);
+    }
+
+    img {
+        height: 80px;
+        width: 180px;
+    }
 
     .konteynir {
         display: flex;
@@ -201,14 +360,8 @@ html, body {
     }
 
     .navbar-toggler {
+        color: white;
         display: block;
-    }
-
-
-
-
-    .navbar-toggler {
-        display: none;
     }
 
     .table-container {
@@ -231,36 +384,10 @@ html, body {
         color: white;
     }
 
-
-
-    .table-container {
-        max-height: 400px;
-        width: 60%;
-        overflow-y: auto;
-        overflow-x: hidden;
-        background-color: rgba(255, 255, 255, 0.8);
-        border-radius: 10px;
-        box-shadow: 0 15px 100px rgba(0, 0, 0, 0.9);
-        margin-top: 20px;
-        z-index: 2;
-    }
-
-    .mediali {
-        width: 70%;
-        border: none;
-        z-index: 2;
-        width: auto;
-        color: white;
-    }
-
-
-
-
-
     .gif-container {
         background-repeat: no-repeat;
-        width: 80%;
-        height: auto;
+        width: 100%;
+        height: 190%;
     }
 
     .btn-container {
@@ -282,51 +409,51 @@ html, body {
     .kont {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 11vh;
+        height:21vh;
+        justify-content:flex-end;
         align-items: baseline;
-        justify-content: flex-end;
     }
     /* Düşünce balonu stili */
     .thought-bubble {
         position: absolute;
-        top: 30%;
+        top: 43%;
         display: flex;
         justify-content: center;
-        left: 2%;
+        left: 13%;
         transform: translateX(-50%);
         background-color: wheat;
         border-radius: 10px;
-        padding: 10px;
-        width: 50%;
-        height: auto;
+        padding: 5px;
+        width: 20%;
+        height: 26%;
         animation: customAni 2s ease 0s 1 normal both;
     }
-}
-@media(max-width:481px) {
 
-    .thought-bubble::after {
-        content: '';
-        position: absolute;
-        bottom: 35%;
-        left: -4%;
-        margin-left: -16px;
-        border-width: 15px;
-        border-style: solid;
-        border-color: transparent wheat wheat transparent;
-    }
+        .thought-bubble::after {
+            content: '';
+            position: absolute;
+            bottom: -14%;
+            border-radius:20px;
+            left: -3%;
+            margin-left: -16px;
+            border-width: 10px;
+            border-style: solid;
+            border-color: wheat ;
+        }
 
     .bubble-content {
         text-align: center;
+        padding:15px;
+        font-size:15px;
     }
 
     .btn:hover {
         background-color: grey;
     }
 }
+   
 
-    /* Popup stili */
+    /* BURAYA GEREK YOK */
     .popup {
         display: flex;
         align-items: center;
@@ -490,12 +617,12 @@ html, body {
         font-size: 50px;
         background-color: transparent;
         text-decoration: none;
-        top: 40%;
+        top: 103%;
         transform: translateY(-50%);
+        padding:5px;
         color: aqua;
         user-select: none;
         background-color: rgba(255, 255, 255, 0);
-        padding: 10px;
         border-radius: 50%;
         cursor: pointer;
     }
@@ -507,12 +634,7 @@ html, body {
     .next {
         right: 10px;
     }
-
-    .falling-item {
-        opacity: 0;
-        position: relative;
-        animation: fall 1s ease-in-out forwards;
-    }
+    
 
         .falling-item:nth-child(1) {
             animation-delay: 0s;

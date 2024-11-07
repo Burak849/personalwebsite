@@ -19,18 +19,7 @@
         transition: background-image 0.5s;
     }
 
-    .kont {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 21.5vh; 
-        align-items: baseline;
-        justify-content: flex-end;
-    }
-
-    
-
+  
     .btn-container {
         margin-top: 20px;
     }
@@ -98,7 +87,7 @@
 
 <section style="display: flex; flex-direction: column; flex-wrap: wrap; align-content: flex-end; justify-content: center; align-items: center;">
 
-    <div class="falling-item " style="display:flex; align-items:center; justify-content:center; margin-left:400px;">
+    <div class="falling-item" >
         <h2 style="color:lavender;"><b>My working experience:</b></h2>
     </div>
 
@@ -137,7 +126,7 @@
 
 <div class="kont">
     <div class="gif-container">
-        <img src="~/Media/hello-ezgif.gif" alt="Hellogif" />
+        <img src="~/Media/hello-ezgif.gif" class="hello" alt="Hellogif" />
 
         <div class="thought-bubble">
             <div class="bubble-content">
@@ -157,82 +146,84 @@
         <span class="page-number">1</span>
         <span class="close" onclick="closePopup()">&times;12</span>
     </div>
-        <div class="popup__content">
-            <div class="page active" id="page-1">
-                <img src="~/Media/Storyfold/2.jpg" alt="Page1" class="popup-image" />
-                <img src="~/Media/Storyfold/1.jpg" alt="Page1" class="popup-image" />
-
-                <p class="p2">
-                    I was born on February 1, 2000. Since I was a very active child, I thought of digging through the archives of my grandparents to find a photo from my infancy, but I guess I won't find much trace of that period. So, I decided to add a photo from the years when I started kindergarten.
-                </p>
-            </div>
-            <div class="page" id="page-2">
-                <img src="~/Media/Storyfold/4.jpg" alt="Page1" class="popup-image" />
-                <p class="p2">My primary and high school life was quite ordinary like most people. However, during my high school years, my curiosity about abroad grew. This curiosity led me to apply for the Work and Travel program at the end of my university's preparatory year in 2018. I am still convinced that I took an important step in my life there. After this experience, I felt a strong self-confidence and competence for everything I would do in the future.</p>
-            </div>
-            <div class="page" id="page-3">
-
-                <img src="~/Media/Storyfold/5.jpg" alt="Page1" class="popup-image" />
-                <p class="p2">Getting to know different cultures, meeting new people and collecting many memories affected me deeply. I especially had the opportunity to practice my English, and I learned a lot, even while having conversations with native English speakers. My confidence grew even more, and I was sure that these interactions would shape even my future choices.</p>
-            </div>
-            <div class="page" id="page-4">
-
-                <img src="~/Media/Storyfold/6.jpg" alt="Page1" class="popup-image" />
-                <p class="p2">
-                    During my time in the USA, I discovered sports, activities and flavors that I had never even heard of before. A very different window had opened in my life with new experiences.
-                </p>
-            </div>
-            <div class="page" id="page-5">
-
-                <img src="~/Media/Storyfold/7.jpg" alt="Page1" class="popup-image" />
-                <p class="p2">I felt that my life had changed after I came back from the U.S. This experience had opened new horizons for me and I thought I should continue it. As soon as my Work and Travel program was over, I applied for the Erasmus+ program. I successfully passed the exams and was awarded the right to study Erasmus in Klaipeda, Lithuania. The friendships I made here are still going strong; some of my friendships are as strong and special as a long-standing relationship of almost 20 years.</p>
-            </div>
-            <div class="page" id="page-6">
-
-                <img src="~/Media/Storyfold/9.jpg" alt="Page1" class="popup-image" />
-                <p class="p2">Some of the hobbies I had picked up in the United States haunted me. I continued these hobbies wherever I went. Some events were organized by myself, while others were organized by our Erasmus coordinators.</p>
-            </div>
-
-            <div class="page" id="page-7">
-
-                <img src="~/Media/Storyfold/10.jpg" alt="Page1" class="popup-image" />
-                <p class="p2">The most important of the events I organized myself was the “Cultural Dinner”. With the participation of 55 people from different countries, we experienced cultural dishes, dances and traditions ranging from France to Pakistan. One of the most interesting parts was that Belgians write a special story on their birthday and act it out theatrically for the birthday person.</p>
-            </div>
-            <div class="page" id="page-8">
-
-                <img src="~/Media/Storyfold/11.jpg" alt="Page1" class="popup-image" />
-                <p class="p2">After my Erasmus program ended, I decided that I needed to take a year off from school and get stronger economically. With the advantage of European citizenship that my family provided me, I went to Germany and started working. After my experience in the US, working in Europe was a very different experience and I gained a lot from it.</p>
-            </div>
-            <div class="page" id="page-9">
-
-                <img src="~/Media/Storyfold/12.jpg" alt="Page1" class="popup-image" />
-                <p class="p2">
-                    After working at McDonald's in Germany for a year, I had the opportunity to visit the Netherlands, a country I had wanted to visit for a long time before going back to school.
-                </p>
-            </div>
-            <div class="page" id="page-10">
-
-                <img src="~/Media/Storyfold/14.jpg" alt="Page1" class="popup-image" />
-                <p class="p2">
-                    Traveling around the country had become a hobby for me. Also, when my brother started working in Malta, I often had the chance to go to Malta to visit him on vacation.
-                </p>
-            </div>
-            <div class="page" id="page-11">
-
-                <img src="~/Media/Storyfold/15.jpg" alt="Page1" class="popup-image" />
-                <p class="p2">
-                    Before I knew it, like all good things, this fun and educational period came to an end. It was time to graduate from my university. In October 2024, I completed my internship and officially graduated from Süleyman Demirel University. Now, I am excited to transfer the knowledge and experience I have gained so far to business life. While meeting new people and learning from them, I am happy to be able to contribute to them with the knowledge I have.
-                </p>
-            </div>
-            <div class="page" id="page-12">
-
-                <img src="~/Media/Storyfold/17.jpg" alt="Page1" class="popup-image" />
-                <p class="p2">Finally, I don't think I will be able to get rid of my cat's fingernails if I don't mention my cat ``Şıpırtma''. This sarman cat, which I found and adopted on the street when he was still a kitten, is getting ready to come with me wherever I go.</p>
-            </div>
-
-            <div class="prev" onclick="prevPage()">&#8249;</div>
-            <div class="next" onclick="nextPage()">&#8250;</div>
+    <div class="popup__content">
+        <div class="page active" id="page-1">
+            <img src="~/Media/Storyfold/2.jpg" alt="Page1" class="popup-image" />
+            <p class="p2">
+                I was born on February 1, 2000. Since I was a very active child, I thought of digging through the archives of my grandparents to find a photo from my infancy, but I guess I won't find much trace of that period. So, I decided to add a photo from the years when I started kindergarten.
+            </p>
         </div>
+        <div class="page" id="page-2">
+            <img src="~/Media/Storyfold/1.jpg" alt="Page1" class="popup-image" />
+            <p class="p2">My elementary school years were filled with excitement and curiosity. Every day felt like an adventure, discovering new things and building friendships. </p>
+        </div>
+        <div class="page" id="page-3">
+            <img src="~/Media/Storyfold/4.jpg" alt="Page1" class="popup-image" />
+            <p class="p2">My primary and high school life was quite ordinary like most people. However, during my high school years, my curiosity about abroad grew. This curiosity led me to apply for the Work and Travel program at the end of my university's preparatory year in 2018. I am still convinced that I took an important step in my life there. After this experience, I felt a strong self-confidence and competence for everything I would do in the future.</p>
+        </div>
+        <div class="page" id="page-4">
+
+            <img src="~/Media/Storyfold/5.jpg" alt="Page1" class="popup-image" />
+            <p class="p2">Getting to know different cultures, meeting new people and collecting many memories affected me deeply. I especially had the opportunity to practice my English, and I learned a lot, even while having conversations with native English speakers. My confidence grew even more, and I was sure that these interactions would shape even my future choices.</p>
+        </div>
+        <div class="page" id="page-5">
+
+            <img src="~/Media/Storyfold/6.jpg" alt="Page1" class="popup-image" />
+            <p class="p2">
+                During my time in the USA, I discovered sports, activities and flavors that I had never even heard of before. A very different window had opened in my life with new experiences.
+            </p>
+        </div>
+        <div class="page" id="page-6">
+
+            <img src="~/Media/Storyfold/7.jpg" alt="Page1" class="popup-image" />
+            <p class="p2">I felt that my life had changed after I came back from the U.S. This experience had opened new horizons for me and I thought I should continue it. As soon as my Work and Travel program was over, I applied for the Erasmus+ program. I successfully passed the exams and was awarded the right to study Erasmus in Klaipeda, Lithuania. The friendships I made here are still going strong; some of my friendships are as strong and special as a long-standing relationship of almost 20 years.</p>
+        </div>
+        <div class="page" id="page-7">
+
+            <img src="~/Media/Storyfold/9.jpg" alt="Page1" class="popup-image" />
+            <p class="p2">Some of the hobbies I had picked up in the United States haunted me. I continued these hobbies wherever I went. Some events were organized by myself, while others were organized by our Erasmus coordinators.</p>
+        </div>
+
+        <div class="page" id="page-8">
+
+            <img src="~/Media/Storyfold/10.jpg" alt="Page1" class="popup-image" />
+            <p class="p2">The most important of the events I organized myself was the “Cultural Dinner”. With the participation of 55 people from different countries, we experienced cultural dishes, dances and traditions ranging from France to Pakistan. One of the most interesting parts was that Belgians write a special story on their birthday and act it out theatrically for the birthday person.</p>
+        </div>
+        <div class="page" id="page-9">
+
+            <img src="~/Media/Storyfold/11.jpg" alt="Page1" class="popup-image" />
+            <p class="p2">After my Erasmus program ended, I decided that I needed to take a year off from school and get stronger economically. With the advantage of European citizenship that my family provided me, I went to Germany and started working. After my experience in the US, working in Europe was a very different experience and I gained a lot from it.</p>
+        </div>
+        <div class="page" id="page-10">
+
+            <img src="~/Media/Storyfold/12.jpg" alt="Page1" class="popup-image" />
+            <p class="p2">
+                After working at McDonald's in Germany for a year, I had the opportunity to visit the Netherlands, a country I had wanted to visit for a long time before going back to school.
+            </p>
+        </div>
+        <div class="page" id="page-11">
+
+            <img src="~/Media/Storyfold/14.jpg" alt="Page1" class="popup-image" />
+            <p class="p2">
+                Traveling around the country had become a hobby for me. Also, when my brother started working in Malta, I often had the chance to go to Malta to visit him on vacation.
+            </p>
+        </div>
+        <div class="page" id="page-12">
+
+            <img src="~/Media/Storyfold/15.jpg" alt="Page1" class="popup-image" />
+            <p class="p2">
+                Before I knew it, like all good things, this fun and educational period came to an end. It was time to graduate from my university. In October 2024, I completed my internship and officially graduated from Süleyman Demirel University. Now, I am excited to transfer the knowledge and experience I have gained so far to business life. While meeting new people and learning from them, I am happy to be able to contribute to them with the knowledge I have.
+            </p>
+        </div>
+        <div class="page" id="page-13">
+
+            <img src="~/Media/Storyfold/17.jpg" alt="Page1" class="popup-image" />
+            <p class="p2">Finally, I don't think I will be able to get rid of my cat's fingernails if I don't mention my cat ``Şıpırtma''. This sarman cat, which I found and adopted on the street when he was still a kitten, is getting ready to come with me wherever I go.</p>
+        </div>
+
+        <div class="prev" onclick="prevPage()">&#8249;</div>
+        <div class="next" onclick="nextPage()">&#8250;</div>
+    </div>
         <a class="popup__close" href="#">X</a>
     </div>
 </div>
