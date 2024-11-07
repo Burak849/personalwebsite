@@ -119,7 +119,7 @@ html, body {
         /* Düşünce balonu stili */
         .thought-bubble {
             position: absolute;
-            top: 61%;
+            top: 64%;
             display: flex;
             justify-content: center;
             left: 40%;
@@ -268,7 +268,7 @@ html, body {
         /* Düşünce balonu stili */
         .thought-bubble {
             position: absolute;
-            top: 61%;
+            top: 65%;
             display: flex;
             justify-content: center;
             left: 40%;
