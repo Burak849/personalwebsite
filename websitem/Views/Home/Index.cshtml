@@ -15,21 +15,21 @@
         transition: background-image 0.5s;
     }
 
-    .background1 {
+    /*.background1 {
         display: flex;
         position: relative;
         background-image: url(/Media/starry.svg);
-        background-size: cover;
+        background-size: contain;
         background-position: center;
         margin: 0;
-        height: 115%;
+        height: 100%;
         width: auto;
         flex-direction: column;
         flex-wrap: wrap;
         align-content: center;
         justify-content: center;
         align-items: center;
-    }
+    }*/
 
     .background2 {
         position: relative;
@@ -245,14 +245,14 @@
     <br />
     <br />
     <br />
-    <div style="width:100%; height:auto; display:flex; justify-content:center;">
+    @*<div style="width:100%; height:auto; display:flex; justify-content:center;">
         <button type="button"
                 class="btn scale"
                 style="transition: var(--transition); cursor: pointer; border: none; border-radius: 30px; width: 200px; font-size: x-large; background-color: #ff5a5f; color: white; "
                 data-bs-target="#contactmodal" data-bs-toggle="modal">
             Get in Touch
         </button>
-    </div>
+    </div>*@
 </div>
 <div class="modal fade" id="contactmodal" tabindex="-1" aria-labelledby="contactmodalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -381,7 +381,7 @@
 
                     <li class="flow">
                         <a class="skill-outer interactive">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160">
+                            <svg style="width:170px;">
                                 <g fill="none" stroke="#fff" opacity="0.87">
                                     <!-- Ellipses -->
                                     <path class="ellipse4" />
@@ -423,7 +423,7 @@
                     <li class="flow">
 
                         <a class="skill-outer graphic">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160">
+                            <svg style="width:170px;">
                                 <g opacity=".87" fill="none" stroke="#fff">
                                     <path class="graphic-shape2" d="M68.54 60.66h60v60h-60z" />
                                     <path class="graphic-middle" d="M68.54 91h.31a30 30 0 0 0 30-30v-.31H68.54z" />

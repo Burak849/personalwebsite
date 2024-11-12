@@ -23,12 +23,43 @@
     scale: 1.1;
     transition: var(--transition);
 }
-
+@media (min-width:480px){
+    .background1 {
+        display: flex;
+        position: relative;
+        background-image: url(/Media/starry.svg);
+        background-size: contain;
+        background-position: center;
+        margin: 0;
+        height: 100%;
+        width: auto;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+}
 /* 768px ve altındaki ekranlar için stiller */
 @media (max-width: 768px) {
     .navbar-nav .nav-link {
         font-size: 16px; /* Font boyutunu 16px yap */
         margin-left: 20px; /* Margin'i küçült */
+    }
+    .background1 {
+        display: flex;
+        position: relative;
+        background-image: url(/Media/starry.svg);
+        background-size: cover;
+        background-position: center;
+        margin: 0;
+        height: 100%;
+        width: auto;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
     }
 }
 
@@ -38,6 +69,7 @@
         font-size: 24px; /* Font boyutunu 24px yap */
         margin-left: 30px; /* Margin'i azalt */
     }
+
 }
 
     @keyframes kaydir {
@@ -521,46 +553,45 @@ to {
 }
 
 
-.interactive {
-    &:hover, &:focus
-
-{
-    .ellipse, text
-
-{
+.interactive:hover, .interactive:focus {
+    /* Hover veya focus durumunda animasyon uygulamak */
     animation: rainbow-color-fill 1s linear infinite;
 }
 
-.hand,
-.bar {
+    .interactive:hover .ellipse,
+    .interactive:focus .ellipse,
+    .interactive:hover text,
+    .interactive:focus text {
+        animation: rainbow-color-fill 1s linear infinite;
+    }
+
+.interactive .hand,
+.interactive .bar {
     stroke: #FFB9B9;
 }
 
-.ellipse4 {
+.interactive .ellipse4 {
     stroke: #DAB9FF;
 }
 
-.ellipse3 {
+.interactive .ellipse3 {
     stroke: #FFB9B9;
 }
 
-.ellipse2 {
+.interactive .ellipse2 {
     stroke: #FFFEB9;
 }
 
-.ellipse1 {
+.interactive .ellipse1 {
     stroke: #B9FFCC;
 }
 
-.ellipse0 {
+.interactive .ellipse0 {
     stroke: #B9C9FF;
 }
 
-.ellipse {
+.interactive .ellipse {
     stroke: transparent;
-}
-
-}
 }
 
 
@@ -727,8 +758,10 @@ to {
         flex-direction: row;
         font-size: 16px;
     }
+
 }
 @media (min-width: 769px) {
+    
     .panel {
         margin: 9px;
         padding: 2rem;
